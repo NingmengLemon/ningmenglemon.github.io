@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="zh"><head>
+<title>尝试详细介绍一下我的 BiliTools - Lemony Blog</title>
+<meta charset="UTF-8">
+<meta name="keywords" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+
+<link rel="shortcut icon" href="/assets/favicon.png" type="image/png" />
+<meta name="description" content="想要介绍一下陪了自己两年多的项目 , 顺便练一下 markdown 语法 阅前提示:   以下内容的措辞可能令人费解, 因为咱在表达方面并没有什么天赋 以下内容不一定正确, 如果有错误欢迎提出w  IntroBiliTools 是我在 2021 年 5 月左右使用 Python 编写的一个用于下载 B 站的各种资源的程序 关于版本号因为有前身在, 所以版本号直接从 2 开始又因为咱的脑子可能有点抽">
+<meta property="og:type" content="article">
+<meta property="og:title" content="尝试详细介绍一下我的 BiliTools">
+<meta property="og:url" content="https://ningmenglemon.github.io/2023/12/29/Try-to-introduce-my-BiliTools/index.html">
+<meta property="og:site_name" content="Lemony Blog">
+<meta property="og:description" content="想要介绍一下陪了自己两年多的项目 , 顺便练一下 markdown 语法 阅前提示:   以下内容的措辞可能令人费解, 因为咱在表达方面并没有什么天赋 以下内容不一定正确, 如果有错误欢迎提出w  IntroBiliTools 是我在 2021 年 5 月左右使用 Python 编写的一个用于下载 B 站的各种资源的程序 关于版本号因为有前身在, 所以版本号直接从 2 开始又因为咱的脑子可能有点抽">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-12-29T07:36:00.000Z">
+<meta property="article:modified_time" content="2023-12-29T19:29:17.083Z">
+<meta property="article:author" content="LemonyNingmeng">
+<meta property="article:tag" content="Bilibili">
+<meta property="article:tag" content="Python">
+<meta property="article:tag" content="Tkinter">
+<meta name="twitter:card" content="summary">
+
+<link rel="stylesheet" href="/lib/fancybox/fancybox.css">
+<link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
+
+
+<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1703878164301">
+
+<link rel="stylesheet" href="/css/style.css?v=1703878164301">
+
+
+
+
+    
+        <link rel="stylesheet" href="/custom.css?v=1703878164301">
+    
+
+
+
+<script src="/lib/mdui_043tiny/mdui.js" async></script>
+<script src="/lib/fancybox/fancybox.umd.js" async></script>
+<script src="/lib/lax.min.js" async></script>
+
+
+<script async src="/js/app.js?v=1703878164301"></script>
+
+ 
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H8H6V4BH7P"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-H8H6V4BH7P');
+</script>
+
+
+<link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css">
+<meta name="generator" content="Hexo 7.0.0"></head><body class="nexmoe mdui-drawer-body-left"><div id="nexmoe-background"><div class="nexmoe-bg" style="background-image: url(/assets/bg.png)"></div><div class="mdui-appbar mdui-shadow-0"><div class="mdui-toolbar"><a class="mdui-btn mdui-btn-icon mdui-ripple" mdui-drawer="{target: &#039;#drawer&#039;, swipe: true}" title="menu"><i class="mdui-icon nexmoefont icon-menu"></i></a><div class="mdui-toolbar-spacer"></div><a class="mdui-btn mdui-btn-icon" href="/" title="LemonyNingmeng"><img src="/assets/avatar.jpg" alt="LemonyNingmeng"></a></div></div></div><div id="nexmoe-header"><div class="nexmoe-drawer mdui-drawer" id="drawer">
+    <div class="nexmoe-avatar mdui-ripple">
+        <a href="/" title="LemonyNingmeng">
+            <img src="/assets/avatar.jpg" alt="LemonyNingmeng" alt="LemonyNingmeng">
+        </a>
+    </div>
+    <div class="nexmoe-count">
+        <div><span>文章</span>2</div>
+        <div><span>标签</span>7</div>
+        <div><span>分类</span>8</div>
+    </div>
+    <div class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/" title="回到首页">
+            <i class="mdui-list-item-icon nexmoefont icon-home"></i>
+            <div class="mdui-list-item-content">
+                回到首页
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/archive.html" title="文章归档">
+            <i class="mdui-list-item-icon nexmoefont icon-container"></i>
+            <div class="mdui-list-item-content">
+                文章归档
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/friends.html" title="朋友们">
+            <i class="mdui-list-item-icon nexmoefont icon-unorderedlist"></i>
+            <div class="mdui-list-item-content">
+                朋友们
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/about.html" title="关于我">
+            <i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
+            <div class="mdui-list-item-content">
+                关于我
+            </div>
+        </a>
+        
+    </div>
+    
+    
+        
+        <div class="nexmoe-widget-wrap">
+	<div class="nexmoe-widget nexmoe-social">
+		<a
+			class="mdui-ripple"
+			href="https://space.bilibili.com/208878706"
+			target="_blank"
+			mdui-tooltip="{content: '哔哩哔哩'}"
+			style="
+				color: rgb(231, 106, 141);
+				background-color: rgba(231, 106, 141, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-bilibili"
+			></i> </a
+		><a
+			class="mdui-ripple"
+			href="https://github.com/NingmengLemon/"
+			target="_blank"
+			mdui-tooltip="{content: 'GitHub'}"
+			style="
+				color: rgb(25, 23, 23);
+				background-color: rgba(25, 23, 23, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-github"
+			></i> </a
+		>
+	</div>
+</div>
+
+    
+        
+        
+        
+        
+        
+        
+   
+    <div class="nexmoe-copyright">
+        &copy; 2023 LemonyNingmeng
+        Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+        & <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank">Nexmoe</a>
+        
+    </div>
+</div><!-- .nexmoe-drawer --></div><div id="nexmoe-content"><div class="nexmoe-primary"><div class="nexmoe-post">
+  <article>
+    
+        <div class="nexmoe-post-cover"> 
+            <img src="/assets/bg.png" alt="尝试详细介绍一下我的 BiliTools" loading="lazy">
+            <h1>尝试详细介绍一下我的 BiliTools</h1>
+        </div>
+    
+    
+    <div class="nexmoe-post-meta">
+    <div class="nexmoe-rainbow">
+        <a class="nexmoefont icon-calendar-fill">2023年12月29日</a>
+        
+            <a class="nexmoefont icon-appstore-fill -link" href="/categories/Program/">Program</a>
+        
+        
+    </div>
+    
+    
+    
+    
+    
+</div>
+
+    <p>想要介绍一下陪了自己两年多的项目 <del>, 顺便练一下 markdown 语法</del></p>
+<p>阅前提示: </p>
+<ol>
+<li>以下内容的措辞可能令人费解, 因为咱在表达方面并没有什么天赋</li>
+<li>以下内容不一定正确, 如果有错误欢迎提出w</li>
+</ol>
+<h1 id="Intro"><a href="#Intro" class="headerlink" title="Intro"></a>Intro</h1><p>BiliTools 是我在 2021 年 5 月左右使用 Python 编写的一个用于下载 B 站的各种资源的程序</p>
+<h2 id="关于版本号"><a href="#关于版本号" class="headerlink" title="关于版本号"></a>关于版本号</h2><p>因为有前身在, 所以版本号直接从 2 开始<br>又因为咱的脑子可能有点抽风, 版本号目前都是 v.2.0.0_Dev{实际更新版本数} 这个样子w<br>目前更新到了 Dev17 的说, 以下内容都是适用于该版本的</p>
+<h2 id="关于前身"><a href="#关于前身" class="headerlink" title="关于前身"></a>关于前身</h2><p>前身是由我编写的 BiliDownloader, 其实就是一个 <a target="_blank" rel="noopener" href="https://github.com/soimort/you-get">you-get</a> 的 GUI 而已<br>附加了一点针对 B 站的功能, 比如弹幕下载和过滤, 版本号为 1</p>
+<h2 id="史山注意"><a href="#史山注意" class="headerlink" title="史山注意"></a>史山注意</h2><p>首先最初在写这个程序的时候我还是个若至, 像各种语言规范什么的都不知道</p>
+<p>你可以在程序中见到:</p>
+<ul>
+<li>随处可见的超长单行</li>
+<li>刁钻古怪的调用链</li>
+<li>(几乎)没有类型标注</li>
+<li>稀少的注释与日志</li>
+<li>一些不知道在干什么但是删掉就会出 Bug 的代码</li>
+<li>各种若至的代码逻辑</li>
+<li>各种花里胡哨但又一堆 Bug 的功能</li>
+</ul>
+<p>然后到现在我稍微懂了那么一点语言规范, 但是先前拉的史已经不好收拾了</p>
+<p>有的时候甚至都不想再继续写, 想 remake 一个新程序出来了</p>
+<p>这个程序伴随着我的进步, 我的程序水平也在逐渐提升（吗？）</p>
+<p><del>所以还是蛮有纪念意义的, 对吧</del></p>
+<h2 id="感谢"><a href="#感谢" class="headerlink" title="感谢"></a>感谢</h2><p><a target="_blank" rel="noopener" href="https://github.com/SocialSisterYi/bilibili-API-collect">Bilibili-API-collect</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/m13253/danmaku2ass">danmaku2ass</a></p>
+<h1 id="Quick-Overview"><a href="#Quick-Overview" class="headerlink" title="Quick Overview"></a>Quick Overview</h1><h2 id="文件结构"><a href="#文件结构" class="headerlink" title="文件结构"></a>文件结构</h2><p>截至 Dev17 的文件结构如下</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">BiliTools<br>├─ bilitools.py             # 主程序<br>├─ basic_window.py          # 提供了(几乎)所有窗口的基类<br>├─ bezier_curve.py          # (未使用)用于画贝塞尔曲线的一些基本操作<br>├─ configuration.py         # 一些与配置相关的数据与操作<br>├─ custom_widgets.py        # 一些自定义的 tk 组件<br>├─ danmaku2ass.py           # 修改过的 danmaku2ass<br>├─ ffdriver.py              # 用于调用 ffmpeg 的操作<br>├─ imglib.py                # 图标们 (以 base64 方式编码的 png)<br>├─ textlib.py               # Tips 和 About 文本<br>├─ videoshot_handler.py     # 提供了用于处理视频快照的一个类<br>└─ biliapis                 # 封装了一些 B 站的 API, 大多取自 bilibili-api-collect<br>     ├─ __init__.py         # 用于统领起这个 API 库, 定义了一些杂七杂八的操作<br>     ├─ requester.py        # 用于请求的模块<br>     ├─ error.py            # 定义了错误类<br>     ├─ bilicodes.py        # 各种常用的标识码<br>     ├─ wbi.py              # WBI 鉴权<br>     ├─ article.py          # 专栏相关<br>     ├─ audio.py            # 音频相关<br>     ├─ comment.py          # 评论相关<br>     ├─ danmaku.py          # 弹幕相关<br>     ├─ dynamic.py          # 动态相关<br>     ├─ live.py             # 直播相关<br>     ├─ login.py            # 登录相关<br>     ├─ manga.py            # 漫画相关<br>     ├─ media.py            # 影视与番剧相关<br>     ├─ stream.py           # 媒体流相关<br>     ├─ subtitle.py         # 字幕相关<br>     ├─ user.py             # 用户相关<br>     ├─ video.py            # 视频相关<br>     └─ other.py            # 其他 API<br></code></pre></td></tr></table></figure>
+
+<h2 id="依赖"><a href="#依赖" class="headerlink" title="依赖"></a>依赖</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">tkinter         # GUI 库, Python 应该会自带<br>pillow          # 用于图像处理<br>qrcode          # 用于生成二维码<br>beautifulsoup4  # 用于处理 HTML 和 XML<br>brotli          # 用于解压数据<br>lxml            # bs4 的依赖<br>colorama        # 用于控制台着色<br>pycryptodome    # 用于计算 CorrespondPath<br></code></pre></td></tr></table></figure>
+<p><a target="_blank" rel="noopener" href="https://github.com/FFmpeg/FFmpeg">ffmpeg</a> - 通过管道进行调用, 安装即可</p>
+<h1 id="Go-♂-Deeper"><a href="#Go-♂-Deeper" class="headerlink" title="Go ♂ Deeper"></a>Go ♂ Deeper</h1><h2 id="各个类间的继承关系"><a href="#各个类间的继承关系" class="headerlink" title="各个类间的继承关系"></a>各个类间的继承关系</h2><details><summary>点击展开</summary>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">object<br>├─ DownloadManager<br>├─ Window<br>│   ├─ MainWindow<br>│   ├─ BatchWindow<br>│   ├─ InputWindow<br>│   ├─ ConfigWindow<br>│   ├─ AudioWindow<br>│   ├─ CommonVideoWindow<br>│   ├─ CollectWindow<br>│   ├─ LoginWindow<br>│   ├─ PbpShower<br>│   ├─ PartsChooser<br>│   ├─ BlackroomWindow<br>│   ├─ BangumiWindow<br>│   ├─ MangaViewer_Rolling      (未完工)<br>│   ├─ MangaViewer_PageTurning   (未完工)<br>│   ├─ SearchWindow<br>│   ├─ PlotShower<br>│   ├─ VideoShotViewer<br>│   ├─ ArticleWindow    (未完工)<br>│   ├─ ToviewWindow     (未完工)<br>│   └─ Thread_with_gui<br>├─ ToolTip<br>├─ _CustomMsgbox<br>└─ VideoShotHandler<br><br>tk.Frame<br>└─ VerticalScrolledFrame<br>    ├─ _CommonVideoSearchShower<br>    └─ _MediaSearchShower<br><br>ttk.Button<br>└─ ImageButton<br><br>tk.Label<br>└─ ImageLabel<br><br>tk.Toplevel<br>└─ _TipWindow<br><br>Exception<br>└─ BiliError<br><br>threading.Thread<br>└─ _DownloadThread<br><br></code></pre></td></tr></table></figure>
+
+</details>
+
+<h2 id="多线程的处理"><a href="#多线程的处理" class="headerlink" title="多线程的处理"></a>多线程的处理</h2><p>就像其他基于 tk 的应用程序一样, 此程序也以主线程为主</p>
+<p>为了处理那些耗时的任务, 自然是需要用到子线程的, 但是子线程没办法直接修改 tk 窗口中的对象, 一修改就会导致<code>thread not in mainloop</code>错误</p>
+<p>于是我在<code>basic_window.py</code>中的<code>Window</code>基类中定义了一个<code>task_queue</code>成员. 这是一个队列, 子线程可以向其中放入无参的函数对象, 而这些函数对象会被位于主线程中的由<code>Tk.after()</code>驱动的一个自动循环执行的函数<code>listen_task</code>自动取出并在主线程中执行. 此时这个函数是在主线程中被执行的, 就可以直接修改窗口中的对象了.</p>
+<p>像这样, 耗时的任务就可以在子线程中执行完毕, 然后把数据装在上述的函数中发送给主线程, 进而由函数填充到窗口中 (填充的过程其实耗时很少)</p>
+<details><summary> 这个基类的多线程控制部分</summary>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Window</span>(<span class="hljs-title class_ inherited__">object</span>): <span class="hljs-comment"># 程序中所有常规窗口的父类</span><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self,title=<span class="hljs-string">&#x27;BiliTools&#x27;</span>,toplevel=<span class="hljs-literal">False</span>,topmost=<span class="hljs-literal">False</span>,alpha=<span class="hljs-number">1.0</span>,master=<span class="hljs-literal">None</span></span>):<br>        self.task_queue = queue.Queue() <span class="hljs-comment"># 此队列用于储存来自子线程的无参函数对象</span><br>        <span class="hljs-keyword">if</span> toplevel <span class="hljs-keyword">or</span> master:<br>            self.window = tk.Toplevel(master=master)<br>        <span class="hljs-keyword">else</span>:<br>            self.window = tk.Tk()<br>        ...<br>        self.listen_task()<br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">listen_task</span>(<span class="hljs-params">self</span>):<br>        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> self.task_queue.empty():<br>            func = self.task_queue.get_nowait()<br>            <span class="hljs-keyword">try</span>:<br>                func()<br>            <span class="hljs-keyword">except</span> Exception <span class="hljs-keyword">as</span> e:<br>                logging.error(<span class="hljs-string">&#x27;Task Listener Caught an Error: &#x27;</span>+<span class="hljs-built_in">str</span>(e))<br>                <span class="hljs-comment">#raise</span><br>                traceback_info = traceback.format_exc()<br>                <span class="hljs-comment"># print(traceback_info)</span><br>            <span class="hljs-keyword">else</span>:<br>                <span class="hljs-keyword">pass</span><br>                <span class="hljs-comment">#logging.debug(&quot;Call func: &quot;+str(func))</span><br>        <span class="hljs-keyword">if</span> self.task_queue.empty():<br>            self.window.after(<span class="hljs-number">10</span>,self.listen_task)<br>        <span class="hljs-keyword">else</span>:<br>            self.window.after(<span class="hljs-number">1</span>,self.listen_task)<br><br>    ...<br></code></pre></td></tr></table></figure>
+<blockquote>
+<p><code>...</code>是被省略的部分</p>
+</blockquote>
+</details>
+
+<p>我通过这种方式来进行多线程协调.</p>
+<p><del>听上去还是蛮巧妙的?</del></p>
+<p>但是, 把这个方法写在基类中就意味着, 每个窗口创建时都会附带一个队列和一个反复执行的函数. 我不清楚别人是不是这么做的, 反正我当时就这么写了w.<br>现在我对这个做法其实不是很满意, 因为我认为这可能消耗了额外的资源 <del>, 多少有些强迫症了</del><br><del>(当然也可能是因为现在我学会了异步, 然后觉得之前的我很蠢就是了)</del></p>
+<h2 id="网络请求的封装"><a href="#网络请求的封装" class="headerlink" title="网络请求的封装"></a>网络请求的封装</h2><p>比较让人难绷的是, 我以前把负责网络请求的模块<code>requester</code>直接放在了<code>biliapis</code>模块中, 我现在觉得这个层次结构不算合理.<br>这也就是说, 要想把<code>biliapis</code>模块用到别的项目中, 底下的<code>requester</code>也会被 copy 一份, 而那个别的项目中可能已经有了别的网络请求模块, 就会造成冗余…<br>然后<code>requester</code>中封装的<code>get</code>与<code>post</code>还对返回的流对象做了处理, 把请求过程中创建的<code>req.Request</code>对象嗯塞了进去, 这是为了方便<code>login</code>模块中对 cookies 的操作. 但也进一步导致了可移植性的下降.</p>
+<details><summary>搓程序时候的趣事(?)</summary>
+
+<p>ChatGPT 一开始说用<code>urllib</code>打开的流中会有<code>request</code>这个成员, 但是其实使用 opener 打开的流中并没有, 当时跟 GPT 杠了挺久, 然后 GPT 改口了ww</p>
+<p>GPT 最终的答复是:</p>
+<p>根据你提供的代码，使用<code>opener.open()</code>方法发送请求并获得响应。在这种情况下，<code>response</code>对象是由<code>opener.open()</code>方法返回的，而不是<code>urlopen()</code>函数返回的。<br><code>Opener</code>对象是<code>urllib.request</code>模块中的一个类，用于发送HTTP请求。<code>opener.open()</code>方法接受一个<code>Request</code>对象作为参数，并返回一个<code>HTTPResponse</code>对象，表示服务器的响应。<br>然而，<code>opener.open()</code>方法返回的<code>HTTPResponse</code>对象可能不会附带<code>request</code>属性。这是因为<code>opener.open()</code>方法是一个高级接口，它隐藏了底层的请求细节，不直接暴露<code>Request</code>对象。</p>
+</details>
+
+<p>以<code>get</code>方法为例, 它的代码如下</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-meta">@auto_retry(<span class="hljs-params">retry_time</span>)</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">get</span>(<span class="hljs-params">url, headers=fake_headers_get</span>):<br>    req = request.Request(url, headers=headers)<br>    response = opener.<span class="hljs-built_in">open</span>(req, <span class="hljs-literal">None</span>, timeout=timeout)<br>    response.request = req      <span class="hljs-comment"># 强行塞入 request</span><br>    logging.debug(<span class="hljs-string">&#x27;Get: &#x27;</span>+url)<br>    <span class="hljs-keyword">return</span> response<br></code></pre></td></tr></table></figure>
+<details><summary>我猜你想吐槽...</summary>
+
+<blockquote>
+<p>啊你这个请求怎么没有用<code>with</code>啊<br>这个函数怎么直接就把流对象传回去了啊</p>
+</blockquote>
+<p>emm来看其他部分是怎么用这个函数的:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">get_content_bytes</span>(<span class="hljs-params">url, headers=fake_headers_get, update_cookie=<span class="hljs-literal">True</span></span>):<br>    <span class="hljs-keyword">with</span> get(url, headers=headers) <span class="hljs-keyword">as</span> response:<br>        <span class="hljs-keyword">if</span> cookies <span class="hljs-keyword">and</span> update_cookie:<br>            cookies.make_cookies(response, response.request)<br>        <span class="hljs-keyword">return</span> read_and_decode_data(response)<br>        <span class="hljs-comment"># 取名有问题, decode 应该改成 decompress</span><br></code></pre></td></tr></table></figure>
+<p><del>我其实不是很确定用自动重试装饰器来修饰这个函数是不是正确的选择</del></p>
+</details>
+
+
+<p>总之就是很不满意 (叉腰)</p>
+<h2 id="多窗口之间的协作"><a href="#多窗口之间的协作" class="headerlink" title="多窗口之间的协作"></a>多窗口之间的协作</h2><p>首先需要提醒的是, 下文提到的<code>Window</code>(定义在<code>basic_window.py</code>中)继承自<code>object</code>, <code>tk.Tk</code>或者<code>tk.Toplevel</code>对象则被存放在<code>Window.window</code>处</p>
+<p><del>很令人费解是吧? 我也想问问以前的我为什么要这么写</del></p>
+<p>我一般会在窗口类(一般继承自<code>Window</code>)的<code>__init__()</code>方法的末尾加上<code>self.window.wait_window(self.window)</code>来使外界在执行实例化窗口类的操作时停在这一步, 直到窗口被释放 (<code>self.window.destroy()</code>被执行)<br>官方的模块 <code>tk.messagebox</code> 和 <code>tk.filedialog</code> 中的操作也有类似的逻辑</p>
+<blockquote>
+<p>当时的我在<code>Window</code>类中直接把上面那个”停下”的操作封装成了<code>self.mainloop()</code>这个方法, 极具迷惑性.<br>注意与下文提到的<code>mainloop</code>做区别.<br><del>越写就越想穿越回去抽自己几个大嘴巴子</del></p>
+</blockquote>
+<p>对于大部分不需要在打开窗口的同时打开另一个窗口的窗口是这样.<br>至于为什么不用<code>Tk.mainloop()</code>来等待窗口, 是因为我发现如果这样做的话, 关闭窗口时会产生一些莫名其妙的问题<br>按照我的理解, <code>Tk.mainloop()</code>会使整个 tk 的事件循环阻塞主线程; 如果通过<code>Tk.destroy()</code>将其打破, tk 会认为整个程序应该结束了, 但其实没有, 这只是一个窗口关闭了而已</p>
+<p>于是我的整个程序里一个<code>Tk.mainloop()</code>都没用过w</p>
+<p>而除了下载窗口外的所有子窗口(<code>Toplevel</code>)的父窗口都是主窗口(<code>Tk</code>), 当把主窗口关掉的时候其余窗口就会被自动地关闭.<br>至于下载窗口, 它拥有特殊的内部逻辑, 并没有使用等待窗口这一机制.</p>
+<h2 id="下载器的内部逻辑"><a href="#下载器的内部逻辑" class="headerlink" title="下载器的内部逻辑"></a>下载器的内部逻辑</h2><p>这一部分最初于 2021 年 11 月左右完成 (根据写的日志来看)</p>
+<p><del>当时这部分是在自习课上想出来的, 笔记本应该还能找到, 但是放在家里了w</del></p>
+<h3 id="显示机制"><a href="#显示机制" class="headerlink" title="显示机制"></a>显示机制</h3><p>并不是通过修改窗口属性将构建好的窗口显示或隐藏, 而是到了需要显示的时候才开始构建</p>
+<p>当 用于接受下载任务的<code>task_receiver()</code>被调用 且 这个函数运行于主线程中 时, <code>show()</code>方法会被自动调用<br>当主窗口中的<code>下载姬</code>按钮被点击时, <code>show()</code>方法也会被调用<br><code>show()</code>方法会执行构建 GUI 的代码, 而<code>hide()</code>方法则会直接销毁整个窗口<br>上述两个方法都必须在主线程中运行, 它们都不会占用太多时间</p>
+<p>&gt;&gt; To be continued…　&lt;&lt;</p>
+
+    <hr />
+<p><small>- 到底了噢 -</small></p>
+
+  </article>
+
+  
+      
+    <div class="nexmoe-post-copyright">
+        <strong>本文作者：</strong>LemonyNingmeng<br>
+        <strong>本文链接：</strong><a href="https://ningmenglemon.github.io/2023/12/29/Try-to-introduce-my-BiliTools/" title="https:&#x2F;&#x2F;ningmenglemon.github.io&#x2F;2023&#x2F;12&#x2F;29&#x2F;Try-to-introduce-my-BiliTools&#x2F;" target="_blank" rel="noopener">https:&#x2F;&#x2F;ningmenglemon.github.io&#x2F;2023&#x2F;12&#x2F;29&#x2F;Try-to-introduce-my-BiliTools&#x2F;</a><br>
+        
+            本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+
+        
+    </div>
+
+
+  
+  
+  <div class="nexmoe-post-meta nexmoe-rainbow">
+   
+    
+        <a class="nexmoefont icon-tag-fill -none-link" href="/tags/Bilibili/" rel="tag">Bilibili</a> <a class="nexmoefont icon-tag-fill -none-link" href="/tags/Python/" rel="tag">Python</a> <a class="nexmoefont icon-tag-fill -none-link" href="/tags/Tkinter/" rel="tag">Tkinter</a>
+    
+</div>
+  
+  
+    <script async src="/js/copy-codeblock.js?v=1703878164283"></script>
+  
+
+  
+      <div class="nexmoe-post-footer">
+          <p><small>假装有评论区</small></p>
+
+      </div>
+  
+</div></div><div class="nexmoe-post-right">    <div class="nexmoe-fixed">
+        <div class="nexmoe-tool">
+
+            
+
+            
+            
+            <button class="mdui-fab catalog" style="overflow:unset;">
+                <i class="nexmoefont icon-i-catalog"></i>
+                <div class="nexmoe-toc">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Intro"><span class="toc-number">1.</span> <span class="toc-text">Intro</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E%E7%89%88%E6%9C%AC%E5%8F%B7"><span class="toc-number">1.1.</span> <span class="toc-text">关于版本号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E%E5%89%8D%E8%BA%AB"><span class="toc-number">1.2.</span> <span class="toc-text">关于前身</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%B2%E5%B1%B1%E6%B3%A8%E6%84%8F"><span class="toc-number">1.3.</span> <span class="toc-text">史山注意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%84%9F%E8%B0%A2"><span class="toc-number">1.4.</span> <span class="toc-text">感谢</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Quick-Overview"><span class="toc-number">2.</span> <span class="toc-text">Quick Overview</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84"><span class="toc-number">2.1.</span> <span class="toc-text">文件结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BE%9D%E8%B5%96"><span class="toc-number">2.2.</span> <span class="toc-text">依赖</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Go-%E2%99%82-Deeper"><span class="toc-number">3.</span> <span class="toc-text">Go ♂ Deeper</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%84%E4%B8%AA%E7%B1%BB%E9%97%B4%E7%9A%84%E7%BB%A7%E6%89%BF%E5%85%B3%E7%B3%BB"><span class="toc-number">3.1.</span> <span class="toc-text">各个类间的继承关系</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%9A%84%E5%A4%84%E7%90%86"><span class="toc-number">3.2.</span> <span class="toc-text">多线程的处理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82%E7%9A%84%E5%B0%81%E8%A3%85"><span class="toc-number">3.3.</span> <span class="toc-text">网络请求的封装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%9A%E7%AA%97%E5%8F%A3%E4%B9%8B%E9%97%B4%E7%9A%84%E5%8D%8F%E4%BD%9C"><span class="toc-number">3.4.</span> <span class="toc-text">多窗口之间的协作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BD%E5%99%A8%E7%9A%84%E5%86%85%E9%83%A8%E9%80%BB%E8%BE%91"><span class="toc-number">3.5.</span> <span class="toc-text">下载器的内部逻辑</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%98%BE%E7%A4%BA%E6%9C%BA%E5%88%B6"><span class="toc-number">3.5.1.</span> <span class="toc-text">显示机制</span></a></li></ol></li></ol></li></ol>
+                </div>
+            </button>
+            
+
+            
+
+            <a href="#nexmoe-content" class="backtop toc-link" aria-label="Back To Top" title="top"><button class="mdui-fab mdui-ripple"><i class="nexmoefont icon-caret-top"></i></button></a>
+        </div>
+    </div>
+</div></div><div id="nexmoe-footer"><!--!--></div><div id="nexmoe-search-space"><div class="search-container"><div class="search-header"><div class="search-input-container"><input class="search-input" type="text" placeholder="搜索" onInput="sinput();"></div><a class="search-close" onclick="sclose();">×</a></div><div class="search-body"></div></div></div><div></div></body></html>
