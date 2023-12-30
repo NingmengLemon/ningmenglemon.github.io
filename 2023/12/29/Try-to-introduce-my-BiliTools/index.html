@@ -14,7 +14,7 @@
 <meta property="og:description" content="想要介绍一下陪了自己两年多的项目 , 顺便练一下 markdown 语法 阅前提示:   以下内容的措辞可能令人费解, 因为咱在表达方面并没有什么天赋 以下内容不一定正确, 如果有错误欢迎提出w  IntroBiliTools 是我在 2021 年 5 月左右使用 Python 编写的一个用于下载 B 站的各种资源的程序 关于版本号因为有前身在, 所以版本号直接从 2 开始又因为咱的脑子可能有点抽">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-12-29T07:36:00.000Z">
-<meta property="article:modified_time" content="2023-12-30T08:53:52.669Z">
+<meta property="article:modified_time" content="2023-12-30T17:35:54.422Z">
 <meta property="article:author" content="LemonyNingmeng">
 <meta property="article:tag" content="Bilibili">
 <meta property="article:tag" content="Python">
@@ -25,15 +25,15 @@
 <link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
 
 
-<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1703926454711">
+<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1703957763878">
 
-<link rel="stylesheet" href="/css/style.css?v=1703926454711">
+<link rel="stylesheet" href="/css/style.css?v=1703957763878">
 
 
 
 
     
-        <link rel="stylesheet" href="/custom.css?v=1703926454711">
+        <link rel="stylesheet" href="/custom.css?v=1703957763878">
     
 
 
@@ -43,10 +43,11 @@
 <script src="/lib/lax.min.js" async></script>
 
 
-<script async src="/js/app.js?v=1703926454712"></script>
+<script async src="/js/app.js?v=1703957763878"></script>
 
  
 
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js"></script>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-H8H6V4BH7P"></script>
 <script>
@@ -207,7 +208,7 @@
 <p><a target="_blank" rel="noopener" href="https://github.com/FFmpeg/FFmpeg">ffmpeg</a> - 通过管道进行调用, 安装即可</p>
 <h1 id="Go-♂-Deeper"><a href="#Go-♂-Deeper" class="headerlink" title="Go ♂ Deeper"></a>Go ♂ Deeper</h1><h2 id="各个类间的继承关系"><a href="#各个类间的继承关系" class="headerlink" title="各个类间的继承关系"></a>各个类间的继承关系</h2><details><summary>点击展开</summary>
 
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">object<br>├─ DownloadManager<br>├─ Window<br>│   ├─ MainWindow<br>│   ├─ BatchWindow<br>│   ├─ InputWindow<br>│   ├─ ConfigWindow<br>│   ├─ AudioWindow<br>│   ├─ CommonVideoWindow<br>│   ├─ CollectWindow<br>│   ├─ LoginWindow<br>│   ├─ PbpShower<br>│   ├─ PartsChooser<br>│   ├─ BlackroomWindow<br>│   ├─ BangumiWindow<br>│   ├─ MangaViewer_Rolling      (未完工)<br>│   ├─ MangaViewer_PageTurning   (未完工)<br>│   ├─ SearchWindow<br>│   ├─ PlotShower<br>│   ├─ VideoShotViewer<br>│   ├─ ArticleWindow    (未完工)<br>│   ├─ ToviewWindow     (未完工)<br>│   └─ Thread_with_gui<br>├─ ToolTip<br>├─ _CustomMsgbox<br>└─ VideoShotHandler<br><br>tk.Frame<br>└─ VerticalScrolledFrame<br>    ├─ _CommonVideoSearchShower<br>    └─ _MediaSearchShower<br><br>ttk.Button<br>└─ ImageButton<br><br>tk.Label<br>└─ ImageLabel<br><br>tk.Toplevel<br>└─ _TipWindow<br><br>Exception<br>└─ BiliError<br><br>threading.Thread<br>└─ _DownloadThread<br><br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">object<br>├─ DownloadManager<br>├─ Window<br>│   ├─ MainWindow<br>│   ├─ BatchWindow<br>│   ├─ InputWindow<br>│   ├─ ConfigWindow<br>│   ├─ AudioWindow<br>│   ├─ CommonVideoWindow<br>│   ├─ CollectWindow<br>│   ├─ LoginWindow<br>│   ├─ PbpShower<br>│   ├─ PartsChooser<br>│   ├─ BlackroomWindow<br>│   ├─ BangumiWindow<br>│   ├─ MangaViewer_Rolling      (未完工)<br>│   ├─ MangaViewer_PageTurning  (未完工)<br>│   ├─ SearchWindow<br>│   ├─ PlotShower<br>│   ├─ VideoShotViewer<br>│   ├─ ArticleWindow    (未完工)<br>│   ├─ ToviewWindow     (未完工)<br>│   └─ Thread_with_gui<br>├─ ToolTip<br>├─ _CustomMsgbox<br>└─ VideoShotHandler<br><br>tk.Frame<br>└─ VerticalScrolledFrame<br>    ├─ _CommonVideoSearchShower<br>    └─ _MediaSearchShower<br><br>ttk.Button<br>└─ ImageButton<br><br>tk.Label<br>└─ ImageLabel<br><br>tk.Toplevel<br>└─ _TipWindow<br><br>Exception<br>└─ BiliError<br><br>threading.Thread<br>└─ _DownloadThread<br><br></code></pre></td></tr></table></figure>
 
 </details>
 
@@ -284,7 +285,7 @@
 <h3 id="数据存储机制"><a href="#数据存储机制" class="headerlink" title="数据存储机制"></a>数据存储机制</h3><p>最核心的内容是<code>data_objs</code>这个成员, 它存储着传入<code>task_receiver</code>的原始数据<br>下载的各个步骤都会读取或修改它</p>
 <details><summary>但是...</summary>
 
-<p>但是, 最开始的时候我没有考虑到<em>线程安全</em><br>不知道是不是因为这个, 程序时常会爆出<code>thread not in mainloop</code>错误<br>因为到处都有用到, 并且之后修补(拉史)时加的锁也到处都是, 所以曾经的加锁尝试 完 全 失 败<br>一加上就互锁, 我已经死了</p>
+<p>但是, 最开始的时候我没有考虑到<em>线程安全</em><br>不知道是不是因为这个, 程序时常会爆出<code>thread not in mainloop</code>错误<br>因为到处都有用到, 并且之后修补(拉史)时加的锁也到处都是, 所以曾经的加锁尝试 完 全 失 败<br>一加上就互锁, 我已经死了<br>remake 罢 (无慈悲)</p>
 </details>
 
 <p>与它相关的三个索引列表</p>
@@ -295,6 +296,53 @@
 </ul>
 <p>存放的内容是任务对应的数据在<code>data_objs</code>中的索引</p>
 <p>感觉逼逼叨叨这么多还不如放张图, 等我…</p>
+<pre class="mermaid">
+flowchart TB
+
+    F[/下载管理器实例化/] -- 启动 --> auto_thread_starter
+
+    c -- 启动 --> task_itself
+
+    subgraph auto_thread_starter
+        direction TB
+
+        b{检查 task_queue}
+        b -- 有任务 --> c[将任务取出, 作为子线程开始运行]
+        b -- 无任务 --> b
+        c --> b
+    end
+
+    subgraph task_itself
+        direction TB
+        g[将参数中的 index 放入 running_indexes]
+        g --> h[任务计数器+1]
+        h --> i[进行任务内容]
+        i --> j[将 index 从 running_indexes 中移除]
+        j --> k{任务是否成功}
+        k -- 是 --> l[将 index 放入 done_indexes]
+        k -- 否 --> m[将 index 放入 failed_indexes]
+        l --> n(任务计数器-1)
+        m --> n
+    end
+
+</pre>
+
+<p>如果要添加任务, 则遵循下面的流程:</p>
+<pre class="mermaid">
+flowchart TB
+    direction TB
+    A[/添加任务/] --> B[获取到下载所需的数据]
+    B --> C[将任务数据放入 data_objs]
+    C --> D[
+        将对应的任务函数和任务在 data_objs 中的索引和数据包装成 lambda
+        放入 task_queue
+        ]
+    D --> E[
+        在 table_display_list 中创建位置
+        <small>任务在两个列表中的索引保持一致</small>
+        ]
+</pre>
+
 <p>&gt;&gt; To be continued… &lt;&lt;</p>
 
     <hr />
@@ -324,7 +372,7 @@
 </div>
   
   
-    <script async src="/js/copy-codeblock.js?v=1703926454692"></script>
+    <script async src="/js/copy-codeblock.js?v=1703957763864"></script>
   
 
   
