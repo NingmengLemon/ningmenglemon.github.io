@@ -14,7 +14,7 @@
 <meta property="og:description" content="想要介绍一下陪了自己两年多的项目 , 顺便练一下 markdown 语法 阅前提示:   以下内容的措辞可能令人费解, 因为咱在表达方面并没有什么天赋 以下内容不一定正确, 如果有错误欢迎提出w  IntroBiliTools 是我在 2021 年 5 月左右使用 Python 编写的一个用于下载 B 站的各种资源的程序 关于版本号因为有前身在, 所以版本号直接从 2 开始又因为咱的脑子可能有点抽">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-12-29T07:36:00.000Z">
-<meta property="article:modified_time" content="2023-12-29T19:29:17.083Z">
+<meta property="article:modified_time" content="2023-12-30T08:53:52.669Z">
 <meta property="article:author" content="LemonyNingmeng">
 <meta property="article:tag" content="Bilibili">
 <meta property="article:tag" content="Python">
@@ -25,15 +25,15 @@
 <link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
 
 
-<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1703878164301">
+<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1703926454711">
 
-<link rel="stylesheet" href="/css/style.css?v=1703878164301">
+<link rel="stylesheet" href="/css/style.css?v=1703926454711">
 
 
 
 
     
-        <link rel="stylesheet" href="/custom.css?v=1703878164301">
+        <link rel="stylesheet" href="/custom.css?v=1703926454711">
     
 
 
@@ -43,7 +43,7 @@
 <script src="/lib/lax.min.js" async></script>
 
 
-<script async src="/js/app.js?v=1703878164301"></script>
+<script async src="/js/app.js?v=1703926454712"></script>
 
  
 
@@ -242,7 +242,7 @@
 <p>啊你这个请求怎么没有用<code>with</code>啊<br>这个函数怎么直接就把流对象传回去了啊</p>
 </blockquote>
 <p>emm来看其他部分是怎么用这个函数的:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">get_content_bytes</span>(<span class="hljs-params">url, headers=fake_headers_get, update_cookie=<span class="hljs-literal">True</span></span>):<br>    <span class="hljs-keyword">with</span> get(url, headers=headers) <span class="hljs-keyword">as</span> response:<br>        <span class="hljs-keyword">if</span> cookies <span class="hljs-keyword">and</span> update_cookie:<br>            cookies.make_cookies(response, response.request)<br>        <span class="hljs-keyword">return</span> read_and_decode_data(response)<br>        <span class="hljs-comment"># 取名有问题, decode 应该改成 decompress</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">get_content_bytes</span>(<span class="hljs-params">url, headers=fake_headers_get, update_cookie=<span class="hljs-literal">True</span></span>):<br>    <span class="hljs-comment"># 取名有问题, 请自动忽略 content 这个词</span><br>    <span class="hljs-keyword">with</span> get(url, headers=headers) <span class="hljs-keyword">as</span> response:<br>        <span class="hljs-keyword">if</span> cookies <span class="hljs-keyword">and</span> update_cookie:<br>            cookies.make_cookies(response, response.request)<br>        <span class="hljs-keyword">return</span> read_and_decode_data(response)<br>        <span class="hljs-comment"># 取名也有问题, decode 应该改成 decompress</span><br></code></pre></td></tr></table></figure>
 <p><del>我其实不是很确定用自动重试装饰器来修饰这个函数是不是正确的选择</del></p>
 </details>
 
@@ -260,8 +260,42 @@
 <h2 id="下载器的内部逻辑"><a href="#下载器的内部逻辑" class="headerlink" title="下载器的内部逻辑"></a>下载器的内部逻辑</h2><p>这一部分最初于 2021 年 11 月左右完成 (根据写的日志来看)</p>
 <p><del>当时这部分是在自习课上想出来的, 笔记本应该还能找到, 但是放在家里了w</del></p>
 <h3 id="显示机制"><a href="#显示机制" class="headerlink" title="显示机制"></a>显示机制</h3><p>并不是通过修改窗口属性将构建好的窗口显示或隐藏, 而是到了需要显示的时候才开始构建</p>
-<p>当 用于接受下载任务的<code>task_receiver()</code>被调用 且 这个函数运行于主线程中 时, <code>show()</code>方法会被自动调用<br>当主窗口中的<code>下载姬</code>按钮被点击时, <code>show()</code>方法也会被调用<br><code>show()</code>方法会执行构建 GUI 的代码, 而<code>hide()</code>方法则会直接销毁整个窗口<br>上述两个方法都必须在主线程中运行, 它们都不会占用太多时间</p>
-<p>&gt;&gt; To be continued…　&lt;&lt;</p>
+<p>当 用于接受下载任务的<code>task_receiver()</code>被调用 且 这个函数运行于主线程中 时, <code>show()</code>方法会被自动调用<br><code>show()</code>方法会执行构建 GUI 的代码, 而<code>hide()</code>方法则会直接销毁整个窗口<br>由于涉及到 GUI 操作, 上述两个方法都必须在主线程中运行</p>
+<p>窗口中显示的的任务信息存储在<code>table_display_list</code>这个多维列表中, 每次刷新显示的信息时<code>auto_refresh_table</code>这个方法会将它的内容展示到 GUI 中</p>
+<blockquote>
+<p><code>auto_refresh_table</code>也是借助<code>Tk.after()</code>来进行自动循环的</p>
+</blockquote>
+<p>下载器刷新 GUI 的流程:</p>
+<ol>
+<li>刷新任务列表<ul>
+<li>如果任务数没有变动, 那么直接修改对应项的值</li>
+<li>如果任务数有变动:<ol>
+<li>先记录哪些项被选中了</li>
+<li>然后删除列表框中的所有项</li>
+<li>将新的信息填充进去</li>
+<li>复现先前选中的项</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>更新统计信息</li>
+<li>准备下一次自动刷新</li>
+</ol>
+<h3 id="数据存储机制"><a href="#数据存储机制" class="headerlink" title="数据存储机制"></a>数据存储机制</h3><p>最核心的内容是<code>data_objs</code>这个成员, 它存储着传入<code>task_receiver</code>的原始数据<br>下载的各个步骤都会读取或修改它</p>
+<details><summary>但是...</summary>
+
+<p>但是, 最开始的时候我没有考虑到<em>线程安全</em><br>不知道是不是因为这个, 程序时常会爆出<code>thread not in mainloop</code>错误<br>因为到处都有用到, 并且之后修补(拉史)时加的锁也到处都是, 所以曾经的加锁尝试 完 全 失 败<br>一加上就互锁, 我已经死了</p>
+</details>
+
+<p>与它相关的三个索引列表</p>
+<ul>
+<li><code>failed_indexes</code></li>
+<li><code>running_indexes</code></li>
+<li><code>done_indexes</code></li>
+</ul>
+<p>存放的内容是任务对应的数据在<code>data_objs</code>中的索引</p>
+<p>感觉逼逼叨叨这么多还不如放张图, 等我…</p>
+<p>&gt;&gt; To be continued… &lt;&lt;</p>
 
     <hr />
 <p><small>- 到底了噢 -</small></p>
@@ -290,7 +324,7 @@
 </div>
   
   
-    <script async src="/js/copy-codeblock.js?v=1703878164283"></script>
+    <script async src="/js/copy-codeblock.js?v=1703926454692"></script>
   
 
   
@@ -309,7 +343,7 @@
             <button class="mdui-fab catalog" style="overflow:unset;">
                 <i class="nexmoefont icon-i-catalog"></i>
                 <div class="nexmoe-toc">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Intro"><span class="toc-number">1.</span> <span class="toc-text">Intro</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E%E7%89%88%E6%9C%AC%E5%8F%B7"><span class="toc-number">1.1.</span> <span class="toc-text">关于版本号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E%E5%89%8D%E8%BA%AB"><span class="toc-number">1.2.</span> <span class="toc-text">关于前身</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%B2%E5%B1%B1%E6%B3%A8%E6%84%8F"><span class="toc-number">1.3.</span> <span class="toc-text">史山注意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%84%9F%E8%B0%A2"><span class="toc-number">1.4.</span> <span class="toc-text">感谢</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Quick-Overview"><span class="toc-number">2.</span> <span class="toc-text">Quick Overview</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84"><span class="toc-number">2.1.</span> <span class="toc-text">文件结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BE%9D%E8%B5%96"><span class="toc-number">2.2.</span> <span class="toc-text">依赖</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Go-%E2%99%82-Deeper"><span class="toc-number">3.</span> <span class="toc-text">Go ♂ Deeper</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%84%E4%B8%AA%E7%B1%BB%E9%97%B4%E7%9A%84%E7%BB%A7%E6%89%BF%E5%85%B3%E7%B3%BB"><span class="toc-number">3.1.</span> <span class="toc-text">各个类间的继承关系</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%9A%84%E5%A4%84%E7%90%86"><span class="toc-number">3.2.</span> <span class="toc-text">多线程的处理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82%E7%9A%84%E5%B0%81%E8%A3%85"><span class="toc-number">3.3.</span> <span class="toc-text">网络请求的封装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%9A%E7%AA%97%E5%8F%A3%E4%B9%8B%E9%97%B4%E7%9A%84%E5%8D%8F%E4%BD%9C"><span class="toc-number">3.4.</span> <span class="toc-text">多窗口之间的协作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BD%E5%99%A8%E7%9A%84%E5%86%85%E9%83%A8%E9%80%BB%E8%BE%91"><span class="toc-number">3.5.</span> <span class="toc-text">下载器的内部逻辑</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%98%BE%E7%A4%BA%E6%9C%BA%E5%88%B6"><span class="toc-number">3.5.1.</span> <span class="toc-text">显示机制</span></a></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Intro"><span class="toc-number">1.</span> <span class="toc-text">Intro</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E%E7%89%88%E6%9C%AC%E5%8F%B7"><span class="toc-number">1.1.</span> <span class="toc-text">关于版本号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E%E5%89%8D%E8%BA%AB"><span class="toc-number">1.2.</span> <span class="toc-text">关于前身</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%B2%E5%B1%B1%E6%B3%A8%E6%84%8F"><span class="toc-number">1.3.</span> <span class="toc-text">史山注意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%84%9F%E8%B0%A2"><span class="toc-number">1.4.</span> <span class="toc-text">感谢</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Quick-Overview"><span class="toc-number">2.</span> <span class="toc-text">Quick Overview</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84"><span class="toc-number">2.1.</span> <span class="toc-text">文件结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BE%9D%E8%B5%96"><span class="toc-number">2.2.</span> <span class="toc-text">依赖</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Go-%E2%99%82-Deeper"><span class="toc-number">3.</span> <span class="toc-text">Go ♂ Deeper</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%84%E4%B8%AA%E7%B1%BB%E9%97%B4%E7%9A%84%E7%BB%A7%E6%89%BF%E5%85%B3%E7%B3%BB"><span class="toc-number">3.1.</span> <span class="toc-text">各个类间的继承关系</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%9A%84%E5%A4%84%E7%90%86"><span class="toc-number">3.2.</span> <span class="toc-text">多线程的处理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82%E7%9A%84%E5%B0%81%E8%A3%85"><span class="toc-number">3.3.</span> <span class="toc-text">网络请求的封装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%9A%E7%AA%97%E5%8F%A3%E4%B9%8B%E9%97%B4%E7%9A%84%E5%8D%8F%E4%BD%9C"><span class="toc-number">3.4.</span> <span class="toc-text">多窗口之间的协作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BD%E5%99%A8%E7%9A%84%E5%86%85%E9%83%A8%E9%80%BB%E8%BE%91"><span class="toc-number">3.5.</span> <span class="toc-text">下载器的内部逻辑</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%98%BE%E7%A4%BA%E6%9C%BA%E5%88%B6"><span class="toc-number">3.5.1.</span> <span class="toc-text">显示机制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8%E6%9C%BA%E5%88%B6"><span class="toc-number">3.5.2.</span> <span class="toc-text">数据存储机制</span></a></li></ol></li></ol></li></ol>
                 </div>
             </button>
             
