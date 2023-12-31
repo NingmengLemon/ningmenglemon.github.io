@@ -6,17 +6,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
 
 <link rel="shortcut icon" href="/assets/favicon.png" type="image/png" />
-<meta name="description" content="想要介绍一下陪了自己两年多的项目 , 顺便练一下 markdown 语法 阅前提示:   以下内容的措辞可能令人费解, 因为咱在表达方面并没有什么天赋 以下内容不一定正确或者符合规范, 如果有错误欢迎提出w  IntroBiliTools 是我在 2021 年 5 月左右使用 Python 编写的一个用于下载 B 站的各种资源的程序 关于版本号因为有前身在, 所以版本号直接从 2 开始又因为咱的脑">
+<meta name="description" content="想要介绍一下陪了自己两年多的项目 , 顺便练一下 markdown 语法 阅前提示:   以下内容的措辞可能令人费解, 因为咱在表达方面并没有什么天赋 以下内容不一定正确或者符合规范, 如果有错误欢迎提出w  IntroBiliTools 是我在 2021 年 5 月左右使用 Python 编写的一个用于下载 B 站的各种资源的程序 项目地址 关于版本号因为有前身在, 所以版本号直接从 2 开始又">
 <meta property="og:type" content="article">
 <meta property="og:title" content="尝试详细介绍一下我的 BiliTools">
 <meta property="og:url" content="https://ningmenglemon.github.io/2023/12/29/Try-to-introduce-my-BiliTools/index.html">
 <meta property="og:site_name" content="Lemony Blog">
-<meta property="og:description" content="想要介绍一下陪了自己两年多的项目 , 顺便练一下 markdown 语法 阅前提示:   以下内容的措辞可能令人费解, 因为咱在表达方面并没有什么天赋 以下内容不一定正确或者符合规范, 如果有错误欢迎提出w  IntroBiliTools 是我在 2021 年 5 月左右使用 Python 编写的一个用于下载 B 站的各种资源的程序 关于版本号因为有前身在, 所以版本号直接从 2 开始又因为咱的脑">
+<meta property="og:description" content="想要介绍一下陪了自己两年多的项目 , 顺便练一下 markdown 语法 阅前提示:   以下内容的措辞可能令人费解, 因为咱在表达方面并没有什么天赋 以下内容不一定正确或者符合规范, 如果有错误欢迎提出w  IntroBiliTools 是我在 2021 年 5 月左右使用 Python 编写的一个用于下载 B 站的各种资源的程序 项目地址 关于版本号因为有前身在, 所以版本号直接从 2 开始又">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://ningmenglemon.github.io/assets/blogs/BiliTools-introduction/plot_shower.png">
 <meta property="og:image" content="https://ningmenglemon.github.io/assets/blogs/BiliTools-introduction/plot_shower_failed.png">
 <meta property="article:published_time" content="2023-12-29T07:36:00.000Z">
-<meta property="article:modified_time" content="2023-12-31T18:00:34.708Z">
+<meta property="article:modified_time" content="2023-12-31T18:21:06.386Z">
 <meta property="article:author" content="LemonyNingmeng">
 <meta property="article:tag" content="Bilibili">
 <meta property="article:tag" content="Python">
@@ -28,15 +28,15 @@
 <link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
 
 
-<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1704045640960">
+<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1704047049891">
 
-<link rel="stylesheet" href="/css/style.css?v=1704045640960">
+<link rel="stylesheet" href="/css/style.css?v=1704047049891">
 
 
 
 
     
-        <link rel="stylesheet" href="/custom.css?v=1704045640960">
+        <link rel="stylesheet" href="/custom.css?v=1704047049891">
     
 
 
@@ -46,7 +46,7 @@
 <script src="/lib/lax.min.js" async></script>
 
 
-<script async src="/js/app.js?v=1704045640960"></script>
+<script async src="/js/app.js?v=1704047049891"></script>
 
  
 
@@ -185,6 +185,7 @@
 <li>以下内容不一定正确或者符合规范, 如果有错误欢迎提出w</li>
 </ol>
 <h1 id="Intro"><a href="#Intro" class="headerlink" title="Intro"></a>Intro</h1><p>BiliTools 是我在 2021 年 5 月左右使用 Python 编写的一个用于下载 B 站的各种资源的程序</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/NingmengLemon/BiliTools">项目地址</a></p>
 <h2 id="关于版本号"><a href="#关于版本号" class="headerlink" title="关于版本号"></a>关于版本号</h2><p>因为有前身在, 所以版本号直接从 2 开始<br>又因为咱的脑子可能有点抽风, 版本号目前都是 v.2.0.0_Dev{实际更新版本数} 这个样子w<br>目前更新到了 Dev17 的说, 以下内容都是适用于该版本的</p>
 <h2 id="关于前身"><a href="#关于前身" class="headerlink" title="关于前身"></a>关于前身</h2><p>前身是由我编写的 BiliDownloader, 其实就是一个 <a target="_blank" rel="noopener" href="https://github.com/soimort/you-get">you-get</a> 的 GUI 而已<br>附加了一点针对 B 站的功能, 比如弹幕下载和过滤, 版本号为 1</p>
 <h2 id="史山注意"><a href="#史山注意" class="headerlink" title="史山注意"></a>史山注意</h2><p>首先最初在写这个程序的时候我还是个若至, 像各种语言规范什么的都不知道</p>
@@ -541,7 +542,7 @@ flowchart TB
 </div>
   
   
-    <script async src="/js/copy-codeblock.js?v=1704045640946"></script>
+    <script async src="/js/copy-codeblock.js?v=1704047049877"></script>
   
 
   
