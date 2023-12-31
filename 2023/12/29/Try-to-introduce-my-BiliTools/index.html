@@ -6,34 +6,37 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
 
 <link rel="shortcut icon" href="/assets/favicon.png" type="image/png" />
-<meta name="description" content="想要介绍一下陪了自己两年多的项目 , 顺便练一下 markdown 语法 阅前提示:   以下内容的措辞可能令人费解, 因为咱在表达方面并没有什么天赋 以下内容不一定正确, 如果有错误欢迎提出w  IntroBiliTools 是我在 2021 年 5 月左右使用 Python 编写的一个用于下载 B 站的各种资源的程序 关于版本号因为有前身在, 所以版本号直接从 2 开始又因为咱的脑子可能有点抽">
+<meta name="description" content="想要介绍一下陪了自己两年多的项目 , 顺便练一下 markdown 语法 阅前提示:   以下内容的措辞可能令人费解, 因为咱在表达方面并没有什么天赋 以下内容不一定正确或者符合规范, 如果有错误欢迎提出w  IntroBiliTools 是我在 2021 年 5 月左右使用 Python 编写的一个用于下载 B 站的各种资源的程序 关于版本号因为有前身在, 所以版本号直接从 2 开始又因为咱的脑">
 <meta property="og:type" content="article">
 <meta property="og:title" content="尝试详细介绍一下我的 BiliTools">
 <meta property="og:url" content="https://ningmenglemon.github.io/2023/12/29/Try-to-introduce-my-BiliTools/index.html">
 <meta property="og:site_name" content="Lemony Blog">
-<meta property="og:description" content="想要介绍一下陪了自己两年多的项目 , 顺便练一下 markdown 语法 阅前提示:   以下内容的措辞可能令人费解, 因为咱在表达方面并没有什么天赋 以下内容不一定正确, 如果有错误欢迎提出w  IntroBiliTools 是我在 2021 年 5 月左右使用 Python 编写的一个用于下载 B 站的各种资源的程序 关于版本号因为有前身在, 所以版本号直接从 2 开始又因为咱的脑子可能有点抽">
+<meta property="og:description" content="想要介绍一下陪了自己两年多的项目 , 顺便练一下 markdown 语法 阅前提示:   以下内容的措辞可能令人费解, 因为咱在表达方面并没有什么天赋 以下内容不一定正确或者符合规范, 如果有错误欢迎提出w  IntroBiliTools 是我在 2021 年 5 月左右使用 Python 编写的一个用于下载 B 站的各种资源的程序 关于版本号因为有前身在, 所以版本号直接从 2 开始又因为咱的脑">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://ningmenglemon.github.io/assets/blogs/BiliTools-introduction/plot_shower.png">
+<meta property="og:image" content="https://ningmenglemon.github.io/assets/blogs/BiliTools-introduction/plot_shower_failed.png">
 <meta property="article:published_time" content="2023-12-29T07:36:00.000Z">
-<meta property="article:modified_time" content="2023-12-31T05:43:45.196Z">
+<meta property="article:modified_time" content="2023-12-31T15:03:11.192Z">
 <meta property="article:author" content="LemonyNingmeng">
 <meta property="article:tag" content="Bilibili">
 <meta property="article:tag" content="Python">
 <meta property="article:tag" content="Tkinter">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://ningmenglemon.github.io/assets/blogs/BiliTools-introduction/plot_shower.png">
 
 <link rel="stylesheet" href="/lib/fancybox/fancybox.css">
 <link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
 
 
-<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1704006160939">
+<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1704041107406">
 
-<link rel="stylesheet" href="/css/style.css?v=1704006160939">
+<link rel="stylesheet" href="/css/style.css?v=1704041107406">
 
 
 
 
     
-        <link rel="stylesheet" href="/custom.css?v=1704006160939">
+        <link rel="stylesheet" href="/custom.css?v=1704041107406">
     
 
 
@@ -43,7 +46,7 @@
 <script src="/lib/lax.min.js" async></script>
 
 
-<script async src="/js/app.js?v=1704006160940"></script>
+<script async src="/js/app.js?v=1704041107407"></script>
 
  
 
@@ -146,7 +149,7 @@
         
    
     <div class="nexmoe-copyright">
-        &copy; 2023 LemonyNingmeng
+        &copy; 2024 LemonyNingmeng
         Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
         & <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank">Nexmoe</a>
         
@@ -179,7 +182,7 @@
 <p>阅前提示: </p>
 <ol>
 <li>以下内容的措辞可能令人费解, 因为咱在表达方面并没有什么天赋</li>
-<li>以下内容不一定正确, 如果有错误欢迎提出w</li>
+<li>以下内容不一定正确或者符合规范, 如果有错误欢迎提出w</li>
 </ol>
 <h1 id="Intro"><a href="#Intro" class="headerlink" title="Intro"></a>Intro</h1><p>BiliTools 是我在 2021 年 5 月左右使用 Python 编写的一个用于下载 B 站的各种资源的程序</p>
 <h2 id="关于版本号"><a href="#关于版本号" class="headerlink" title="关于版本号"></a>关于版本号</h2><p>因为有前身在, 所以版本号直接从 2 开始<br>又因为咱的脑子可能有点抽风, 版本号目前都是 v.2.0.0_Dev{实际更新版本数} 这个样子w<br>目前更新到了 Dev17 的说, 以下内容都是适用于该版本的</p>
@@ -213,12 +216,12 @@
 </details>
 
 <h2 id="多线程的处理"><a href="#多线程的处理" class="headerlink" title="多线程的处理"></a>多线程的处理</h2><p>就像其他基于 tk 的应用程序一样, 此程序也以主线程为主</p>
-<p>为了处理那些耗时的任务, 自然是需要用到子线程的, 但是子线程没办法直接修改 tk 窗口中的对象, 一修改就会导致<code>thread not in mainloop</code>错误</p>
+<p>为了处理那些耗时的任务, 自然是需要用到子线程的, 但是子线程没办法直接修改 tk 窗口中的对象, 否则就会导致<code>thread not in mainloop</code>错误</p>
 <p>于是我在<code>basic_window.py</code>中的<code>Window</code>基类中定义了一个<code>task_queue</code>成员. 这是一个队列, 子线程可以向其中放入无参的函数对象, 而这些函数对象会被位于主线程中的由<code>Tk.after()</code>驱动的一个自动循环执行的函数<code>listen_task</code>自动取出并在主线程中执行. 此时这个函数是在主线程中被执行的, 就可以直接修改窗口中的对象了.</p>
-<p>像这样, 耗时的任务就可以在子线程中执行完毕, 然后把数据装在上述的函数中发送给主线程, 进而由函数填充到窗口中 (填充的过程其实耗时很少)</p>
+<p>像这样, 耗时的任务就可以在子线程中执行完毕, 然后把数据装在上述的函数中发送给主线程, 再由这个函数填充到窗口中 (填充的过程其实耗时很少)</p>
 <details><summary> 这个基类的多线程控制部分</summary>
 
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Window</span>(<span class="hljs-title class_ inherited__">object</span>): <span class="hljs-comment"># 程序中所有常规窗口的父类</span><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self,title=<span class="hljs-string">&#x27;BiliTools&#x27;</span>,toplevel=<span class="hljs-literal">False</span>,topmost=<span class="hljs-literal">False</span>,alpha=<span class="hljs-number">1.0</span>,master=<span class="hljs-literal">None</span></span>):<br>        self.task_queue = queue.Queue() <span class="hljs-comment"># 此队列用于储存来自子线程的无参函数对象</span><br>        <span class="hljs-keyword">if</span> toplevel <span class="hljs-keyword">or</span> master:<br>            self.window = tk.Toplevel(master=master)<br>        <span class="hljs-keyword">else</span>:<br>            self.window = tk.Tk()<br>        ...<br>        self.listen_task()<br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">listen_task</span>(<span class="hljs-params">self</span>):<br>        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> self.task_queue.empty():<br>            func = self.task_queue.get_nowait()<br>            <span class="hljs-keyword">try</span>:<br>                func()<br>            <span class="hljs-keyword">except</span> Exception <span class="hljs-keyword">as</span> e:<br>                logging.error(<span class="hljs-string">&#x27;Task Listener Caught an Error: &#x27;</span>+<span class="hljs-built_in">str</span>(e))<br>                <span class="hljs-comment">#raise</span><br>                traceback_info = traceback.format_exc()<br>                <span class="hljs-comment"># print(traceback_info)</span><br>            <span class="hljs-keyword">else</span>:<br>                <span class="hljs-keyword">pass</span><br>                <span class="hljs-comment">#logging.debug(&quot;Call func: &quot;+str(func))</span><br>        <span class="hljs-keyword">if</span> self.task_queue.empty():<br>            self.window.after(<span class="hljs-number">10</span>,self.listen_task)<br>        <span class="hljs-keyword">else</span>:<br>            self.window.after(<span class="hljs-number">1</span>,self.listen_task)<br><br>    ...<br></code></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Window</span>(<span class="hljs-title class_ inherited__">object</span>): <span class="hljs-comment"># 程序中所有常规窗口的父类</span><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">__init__</span>(<span class="hljs-params">self, ..., toplevel=<span class="hljs-literal">False</span>, ..., master=<span class="hljs-literal">None</span></span>):<br>        self.task_queue = queue.Queue() <span class="hljs-comment"># 此队列用于储存来自子线程的无参函数对象</span><br>        <span class="hljs-keyword">if</span> toplevel <span class="hljs-keyword">or</span> master:<br>            self.window = tk.Toplevel(master=master)<br>        <span class="hljs-keyword">else</span>:<br>            self.window = tk.Tk()<br>        ...<br>        self.listen_task()<br><br>    <span class="hljs-keyword">def</span> <span class="hljs-title function_">listen_task</span>(<span class="hljs-params">self</span>):<br>        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> self.task_queue.empty():<br>            func = self.task_queue.get_nowait()<br>            <span class="hljs-keyword">try</span>:<br>                func()<br>            <span class="hljs-keyword">except</span> Exception <span class="hljs-keyword">as</span> e:<br>                logging.error(<span class="hljs-string">&#x27;Task Listener Caught an Error: &#x27;</span>+<span class="hljs-built_in">str</span>(e))<br>                <span class="hljs-comment">#raise</span><br>                traceback_info = traceback.format_exc()<br>                <span class="hljs-comment"># print(traceback_info)</span><br>            <span class="hljs-keyword">else</span>:<br>                <span class="hljs-keyword">pass</span><br>                <span class="hljs-comment">#logging.debug(&quot;Call func: &quot;+str(func))</span><br>        <span class="hljs-keyword">if</span> self.task_queue.empty():<br>            self.window.after(<span class="hljs-number">10</span>,self.listen_task)<br>        <span class="hljs-keyword">else</span>:<br>            self.window.after(<span class="hljs-number">1</span>,self.listen_task)<br><br>    ...<br></code></pre></td></tr></table></figure>
 <blockquote>
 <p><code>...</code>是被省略的部分</p>
 </blockquote>
@@ -226,7 +229,7 @@
 
 <p>我通过这种方式来进行多线程协调.</p>
 <p><del>听上去还是蛮巧妙的?</del></p>
-<p>但是, 把这个方法写在基类中就意味着, 每个窗口创建时都会附带一个队列和一个反复执行的函数. 我不清楚别人是不是这么做的, 反正我当时就这么写了w.<br>现在我对这个做法其实不是很满意, 因为我认为这可能消耗了额外的资源 <del>, 多少有些强迫症了</del><br><del>(当然也可能是因为现在我学会了异步, 然后觉得之前的我很蠢就是了)</del></p>
+<p>但是, 把这个方法写在基类中就意味着, 每个窗口创建时都会附带一个队列和一个反复执行的函数. 我不清楚别人是不是这么做的, 反正我当时就这么写了w.<br>现在我对这个做法其实不是很满意, 因为我认为这可能消耗了额外的资源 <del>, 多少有些强迫症了</del></p>
 <h2 id="网络请求的封装"><a href="#网络请求的封装" class="headerlink" title="网络请求的封装"></a>网络请求的封装</h2><p>比较让人难绷的是, 我以前把负责网络请求的模块<code>requester</code>直接放在了<code>biliapis</code>模块中, 我现在觉得这个层次结构不算合理.<br>这也就是说, 要想把<code>biliapis</code>模块用到别的项目中, 底下的<code>requester</code>也会被 copy 一份, 而那个别的项目中可能已经有了别的网络请求模块, 就会造成冗余…<br>然后<code>requester</code>中封装的<code>get</code>与<code>post</code>还对返回的流对象做了处理, 把请求过程中创建的<code>req.Request</code>对象嗯塞了进去, 这是为了方便<code>login</code>模块中对 cookies 的操作. 但也进一步导致了可移植性的下降.</p>
 <details><summary>搓程序时候的趣事(?)</summary>
 
@@ -301,7 +304,7 @@
 <pre class="mermaid">
 flowchart TB
 
-    F[/下载管理器实例化/] -- 启动 --> auto_thread_starter
+    F(下载管理器实例化) -- 启动 --> auto_thread_starter
 
     subgraph auto_thread_starter
         direction TB
@@ -337,7 +340,7 @@ flowchart TB
 <pre class="mermaid">
 flowchart TB
     direction TB
-    A[/添加任务/] --> B[获取到下载所需的数据]
+    A(添加任务) --> B[获取到下载所需的数据]
     B --> C[将任务数据放入 data_objs]
     C --> D[
         将对应的任务函数和任务在 data_objs 中的索引和数据包装成 lambda
@@ -386,6 +389,84 @@ end
 <p>缺点是需要手动给页面元素绑定鼠标滚动等事件<br>纵向滚动条用于控制页面的滚动, 实质上是在控制<code>canvas</code>中的里层<code>frame</code>的上下移动</p>
 <p>这个框架被设计成宽度由内容物的宽度决定, 高度由用户定义<br>被用在了<code>SearchWindow</code>的<code>Notebook</code>的单个分页中</p>
 <p>如果需要左右滚动的话也同理了<br>加上一些自动调用的代码应该就能实现像橱窗那样的循环展示效果 <del>(虽然我没亲自写过)</del></p>
+<h2 id="互动视频剧情图展示器的实现"><a href="#互动视频剧情图展示器的实现" class="headerlink" title="互动视频剧情图展示器的实现"></a>互动视频剧情图展示器的实现</h2><p>整个剧情图的展示基于<code>tk.Canvas</code>画布, 在画布右侧和下方分别加上了纵向滚动条和横向滚动条</p>
+<p>最核心的内容是<code>self.plots</code>与<code>self.explored_plot_ids</code><br><code>self.plots</code>是一个装着(装着字典的列表)的列表, 分层存储着请求到的原始数据<br>节点们组成类似于有向图的结构, 像下面这样<br><del>一开始我其实是把它当作树来处理的</del></p>
+<pre class="mermaid">
+flowchart TB
+    subgraph self.plots
+        subgraph layer_1
+            plot_1
+        end
+        subgraph layer_2
+            plot_2
+            plot_3
+            plot_4
+        end
+        subgraph layer_3
+            plot_5
+            plot_6
+        end
+    end
+
+    plot_1 --> plot_2
+    plot_1 --> plot_3
+    plot_1 --> plot_4
+
+    plot_2 --> plot_5
+    plot_2 --> plot_6
+
+    plot_3 --> plot_5
+
+    plot_4 --> plot_5
+
+    plot_6 --> plot_2
+</pre>
+<p><small><del>我超这个<code>mermaid</code>的牛魔绘图啊</del></small><br>分层是为了更有层次地绘图</p>
+<p>各个节点之间的连接由每个节点数据中包含的多个<code>jump_edge_id</code>确定</p>
+<p>为了方便画图, 引入了<code>self.explored_plot_ids</code>, <code>self.plot_coors</code><br><code>self.explored_plot_ids</code>是一个字典, 以<code>节点id: (节点所在的层的索引, 节点在层中的索引)</code>的形式存储节点id到节点数据的映射<br><code>self.plot_coors</code>是一个字典, 以<code>节点id: (节点在画布中的x坐标, y坐标, 节点块的宽, 节点块的高)</code>的形式存储节点id到节点块在画布中的位置的映射</p>
+<p>为了方便下载, 引入了<code>self.cid_map</code>和<code>self.avid_map</code>这两个字典<br>它们分别存储节点id到cid的映射和cid到avid的映射</p>
+<h3 id="节点的探索"><a href="#节点的探索" class="headerlink" title="节点的探索"></a>节点的探索</h3><p>互动视频有两个重要的id, 剧情图id<code>graph_id</code> 和 节点id<code>edge_id</code><br>剧情图id代表这个互动视频, 节点id代表它的节点</p>
+<blockquote>
+<p>剧情图id可以通过向<a href="api.bilibili.com/x/player/v2">这个接口</a>提交互动视频的<code>cid</code>和(<code>avid</code>或<code>bvid</code>)得到</p>
+</blockquote>
+<blockquote>
+<p>每个节点id都有对应的<code>cid</code>, 配合互动视频的<code>bvid</code>或<code>avid</code>可以取到视频的流<br>初始节点的<code>cid</code>就是这个互动视频的<code>cid</code><br><small>其实互动视频的节点就是另一种形式的视频分P</small></p>
+</blockquote>
+<blockquote>
+<p>对接口的节点id参数传入<code>0</code>就可以获得初始节点的数据</p>
+</blockquote>
+<p>借由初始节点的数据, 可以得到它可能跳转到的节点们的id<br>再请求这些节点id的数据, 获得它们可能跳转到的节点们的id<br>就这么一直下去, 直到不再有新的节点id出现</p>
+<blockquote>
+<p>如果一个节点没有跳转到的节点, 就说明它是终止节点</p>
+</blockquote>
+<p>将每一轮上述操作获得的数据按轮分层 <small>(初始节点单独一层)</small>, 就完成了节点探索的操作</p>
+<h3 id="节点的绘制"><a href="#节点的绘制" class="headerlink" title="节点的绘制"></a>节点的绘制</h3><details><summary>先看效果()</summary>
+
+<p>目标视频: <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Pt4y1S7Wb/">电棍家中的惨案</a></p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/assets/blogs/BiliTools-introduction/plot_shower.png" alt="Plot_Shower" data-caption="Plot_Shower" loading="lazy"></p>
+<p>起始节点被涂成淡红色, 终止节点被涂成淡绿色</p>
+</details>
+
+<p>遍历整个<code>self.plots</code>, 为每个节点绘制块, 然后为每个节点绘制跳转箭头</p>
+<ul>
+<li>如果节点跳转到的是下一层的节点, 那么直接连接即可 <small><del>原本想用贝塞尔曲线来连接的, 然后寄了</del></small></li>
+<li>否则则将箭头拉到画布顶部或底部, 绕到目标块所在层的后面进行连接(跳连)</li>
+</ul>
+<p>设置了一些偏移值来确保箭头的线不会重合.<br><small>(但是对于一些关系复杂的互动视频, 上述策略会造成跳连的箭头太多, 导致绘图非常混乱, 完全没法读)</small></p>
+<details><summary>翻车了</summary>
+
+<p>目标视频: <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1eq4y1e7QF/">收养澄闪</a></p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/assets/blogs/BiliTools-introduction/plot_shower_failed.png" alt="Plot_Shower_failed" data-caption="Plot_Shower_failed" loading="lazy"></p>
+<p><del>视频做得太好导致的</del></p>
+</details>
+
+<p>以后可能会做一个生成<code>mermaid</code>流程图的功能? <del>(画饼ing)</del></p>
+<p>总之这玩意真就图一乐</p>
+<h3 id="节点的交互"><a href="#节点的交互" class="headerlink" title="节点的交互"></a>节点的交互</h3><h4 id="点击交互"><a href="#点击交互" class="headerlink" title="点击交互"></a>点击交互</h4><p>我想实现<code>当点击一个节点块的时候, 打开侧边栏并在其中展示这个节点的信息</code>这个交互逻辑</p>
+<p>首先来实现点击绘图对象罢.<br><small><code>tk.Canvas</code>其实是可以为其中的绘图对象绑定点击事件的, 但我当时不知道w</small><br>我给整个 canvas 绑定了一个点击事件, 根据坐标来判断被点击的节点块</p>
+<blockquote>
+<p>等待填充…</p>
+</blockquote>
 <h1 id="Defects"><a href="#Defects" class="headerlink" title="Defects"></a>Defects</h1><h2 id="线程安全问题"><a href="#线程安全问题" class="headerlink" title="线程安全问题"></a>线程安全问题</h2><p>这个问题在 <a href="#%E4%B8%8B%E8%BD%BD%E5%99%A8%E7%9A%84%E5%86%85%E9%83%A8%E9%80%BB%E8%BE%91">下载器的内部逻辑</a> 这部分有提到</p>
 <p>大概就是, 如果有多个线程<em>同时</em>操作一个<em>线程不安全</em>的对象, 就可能会出问题<br>Python 中的字典是线程安全的, 但是列表不是</p>
 <p>为了避免这个问题, 可以:</p>
@@ -458,7 +539,7 @@ end
 </div>
   
   
-    <script async src="/js/copy-codeblock.js?v=1704006160926"></script>
+    <script async src="/js/copy-codeblock.js?v=1704041107392"></script>
   
 
   
@@ -477,7 +558,7 @@ end
             <button class="mdui-fab catalog" style="overflow:unset;">
                 <i class="nexmoefont icon-i-catalog"></i>
                 <div class="nexmoe-toc">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Intro"><span class="toc-number">1.</span> <span class="toc-text">Intro</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E%E7%89%88%E6%9C%AC%E5%8F%B7"><span class="toc-number">1.1.</span> <span class="toc-text">关于版本号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E%E5%89%8D%E8%BA%AB"><span class="toc-number">1.2.</span> <span class="toc-text">关于前身</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%B2%E5%B1%B1%E6%B3%A8%E6%84%8F"><span class="toc-number">1.3.</span> <span class="toc-text">史山注意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%84%9F%E8%B0%A2"><span class="toc-number">1.4.</span> <span class="toc-text">感谢</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Quick-Overview"><span class="toc-number">2.</span> <span class="toc-text">Quick Overview</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84"><span class="toc-number">2.1.</span> <span class="toc-text">文件结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BE%9D%E8%B5%96"><span class="toc-number">2.2.</span> <span class="toc-text">依赖</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Go-%E2%99%82-Deeper"><span class="toc-number">3.</span> <span class="toc-text">Go ♂ Deeper</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%84%E4%B8%AA%E7%B1%BB%E9%97%B4%E7%9A%84%E7%BB%A7%E6%89%BF%E5%85%B3%E7%B3%BB"><span class="toc-number">3.1.</span> <span class="toc-text">各个类间的继承关系</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%9A%84%E5%A4%84%E7%90%86"><span class="toc-number">3.2.</span> <span class="toc-text">多线程的处理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82%E7%9A%84%E5%B0%81%E8%A3%85"><span class="toc-number">3.3.</span> <span class="toc-text">网络请求的封装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%9A%E7%AA%97%E5%8F%A3%E4%B9%8B%E9%97%B4%E7%9A%84%E5%8D%8F%E4%BD%9C"><span class="toc-number">3.4.</span> <span class="toc-text">多窗口之间的协作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BD%E5%99%A8%E7%9A%84%E5%86%85%E9%83%A8%E9%80%BB%E8%BE%91"><span class="toc-number">3.5.</span> <span class="toc-text">下载器的内部逻辑</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%98%BE%E7%A4%BA%E6%9C%BA%E5%88%B6"><span class="toc-number">3.5.1.</span> <span class="toc-text">显示机制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8%E4%B8%8E%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86"><span class="toc-number">3.5.2.</span> <span class="toc-text">数据存储与任务管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BD%E8%BF%9B%E5%BA%A6%E7%9A%84%E4%BF%9D%E5%AD%98%E4%B8%8E%E8%AF%BB%E5%8F%96"><span class="toc-number">3.5.3.</span> <span class="toc-text">下载进度的保存与读取</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BF%9D%E5%AD%98"><span class="toc-number">3.5.3.1.</span> <span class="toc-text">保存</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%BB%E5%8F%96"><span class="toc-number">3.5.3.2.</span> <span class="toc-text">读取</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Tkinter-%E4%B8%AD%E7%9A%84%E6%BB%9A%E5%8A%A8%E9%A1%B5%E9%9D%A2%E7%9A%84%E5%AE%9E%E7%8E%B0"><span class="toc-number">3.6.</span> <span class="toc-text">Tkinter 中的滚动页面的实现</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Defects"><span class="toc-number">4.</span> <span class="toc-text">Defects</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E9%97%AE%E9%A2%98"><span class="toc-number">4.1.</span> <span class="toc-text">线程安全问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%BB%98%E8%AE%A4%E5%8F%82%E6%95%B0%E8%AF%84%E4%BC%B0%E9%97%AE%E9%A2%98"><span class="toc-number">4.2.</span> <span class="toc-text">默认参数评估问题</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Intro"><span class="toc-number">1.</span> <span class="toc-text">Intro</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E%E7%89%88%E6%9C%AC%E5%8F%B7"><span class="toc-number">1.1.</span> <span class="toc-text">关于版本号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E%E5%89%8D%E8%BA%AB"><span class="toc-number">1.2.</span> <span class="toc-text">关于前身</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%B2%E5%B1%B1%E6%B3%A8%E6%84%8F"><span class="toc-number">1.3.</span> <span class="toc-text">史山注意</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%84%9F%E8%B0%A2"><span class="toc-number">1.4.</span> <span class="toc-text">感谢</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Quick-Overview"><span class="toc-number">2.</span> <span class="toc-text">Quick Overview</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84"><span class="toc-number">2.1.</span> <span class="toc-text">文件结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BE%9D%E8%B5%96"><span class="toc-number">2.2.</span> <span class="toc-text">依赖</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Go-%E2%99%82-Deeper"><span class="toc-number">3.</span> <span class="toc-text">Go ♂ Deeper</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%84%E4%B8%AA%E7%B1%BB%E9%97%B4%E7%9A%84%E7%BB%A7%E6%89%BF%E5%85%B3%E7%B3%BB"><span class="toc-number">3.1.</span> <span class="toc-text">各个类间的继承关系</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%9A%84%E5%A4%84%E7%90%86"><span class="toc-number">3.2.</span> <span class="toc-text">多线程的处理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82%E7%9A%84%E5%B0%81%E8%A3%85"><span class="toc-number">3.3.</span> <span class="toc-text">网络请求的封装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%9A%E7%AA%97%E5%8F%A3%E4%B9%8B%E9%97%B4%E7%9A%84%E5%8D%8F%E4%BD%9C"><span class="toc-number">3.4.</span> <span class="toc-text">多窗口之间的协作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BD%E5%99%A8%E7%9A%84%E5%86%85%E9%83%A8%E9%80%BB%E8%BE%91"><span class="toc-number">3.5.</span> <span class="toc-text">下载器的内部逻辑</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%98%BE%E7%A4%BA%E6%9C%BA%E5%88%B6"><span class="toc-number">3.5.1.</span> <span class="toc-text">显示机制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8%E4%B8%8E%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86"><span class="toc-number">3.5.2.</span> <span class="toc-text">数据存储与任务管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BD%E8%BF%9B%E5%BA%A6%E7%9A%84%E4%BF%9D%E5%AD%98%E4%B8%8E%E8%AF%BB%E5%8F%96"><span class="toc-number">3.5.3.</span> <span class="toc-text">下载进度的保存与读取</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BF%9D%E5%AD%98"><span class="toc-number">3.5.3.1.</span> <span class="toc-text">保存</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%BB%E5%8F%96"><span class="toc-number">3.5.3.2.</span> <span class="toc-text">读取</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Tkinter-%E4%B8%AD%E7%9A%84%E6%BB%9A%E5%8A%A8%E9%A1%B5%E9%9D%A2%E7%9A%84%E5%AE%9E%E7%8E%B0"><span class="toc-number">3.6.</span> <span class="toc-text">Tkinter 中的滚动页面的实现</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%92%E5%8A%A8%E8%A7%86%E9%A2%91%E5%89%A7%E6%83%85%E5%9B%BE%E5%B1%95%E7%A4%BA%E5%99%A8%E7%9A%84%E5%AE%9E%E7%8E%B0"><span class="toc-number">3.7.</span> <span class="toc-text">互动视频剧情图展示器的实现</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%8A%82%E7%82%B9%E7%9A%84%E6%8E%A2%E7%B4%A2"><span class="toc-number">3.7.1.</span> <span class="toc-text">节点的探索</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%8A%82%E7%82%B9%E7%9A%84%E7%BB%98%E5%88%B6"><span class="toc-number">3.7.2.</span> <span class="toc-text">节点的绘制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%8A%82%E7%82%B9%E7%9A%84%E4%BA%A4%E4%BA%92"><span class="toc-number">3.7.3.</span> <span class="toc-text">节点的交互</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%82%B9%E5%87%BB%E4%BA%A4%E4%BA%92"><span class="toc-number">3.7.3.1.</span> <span class="toc-text">点击交互</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Defects"><span class="toc-number">4.</span> <span class="toc-text">Defects</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E9%97%AE%E9%A2%98"><span class="toc-number">4.1.</span> <span class="toc-text">线程安全问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%BB%98%E8%AE%A4%E5%8F%82%E6%95%B0%E8%AF%84%E4%BC%B0%E9%97%AE%E9%A2%98"><span class="toc-number">4.2.</span> <span class="toc-text">默认参数评估问题</span></a></li></ol></li></ol>
                 </div>
             </button>
             
