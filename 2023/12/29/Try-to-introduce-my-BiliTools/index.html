@@ -16,7 +16,7 @@
 <meta property="og:image" content="https://ningmenglemon.github.io/assets/blogs/BiliTools-introduction/plot_shower.png">
 <meta property="og:image" content="https://ningmenglemon.github.io/assets/blogs/BiliTools-introduction/plot_shower_failed.png">
 <meta property="article:published_time" content="2023-12-29T07:36:00.000Z">
-<meta property="article:modified_time" content="2023-12-31T18:21:06.386Z">
+<meta property="article:modified_time" content="2024-02-08T07:15:10.818Z">
 <meta property="article:author" content="LemonyNingmeng">
 <meta property="article:tag" content="Bilibili">
 <meta property="article:tag" content="Python">
@@ -28,15 +28,15 @@
 <link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
 
 
-<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1704047049891">
+<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1707389866574">
 
-<link rel="stylesheet" href="/css/style.css?v=1704047049891">
+<link rel="stylesheet" href="/css/style.css?v=1707389866574">
 
 
 
 
     
-        <link rel="stylesheet" href="/custom.css?v=1704047049891">
+        <link rel="stylesheet" href="/custom.css?v=1707389866574">
     
 
 
@@ -46,7 +46,7 @@
 <script src="/lib/lax.min.js" async></script>
 
 
-<script async src="/js/app.js?v=1704047049891"></script>
+<script async src="/js/app.js?v=1707389866574"></script>
 
  
 
@@ -70,8 +70,8 @@
         </a>
     </div>
     <div class="nexmoe-count">
-        <div><span>文章</span>2</div>
-        <div><span>标签</span>7</div>
+        <div><span>文章</span>3</div>
+        <div><span>标签</span>10</div>
         <div><span>分类</span>8</div>
     </div>
     <div class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
@@ -237,7 +237,7 @@
 <p>ChatGPT 一开始说用<code>urllib</code>打开的流中会有<code>request</code>这个成员, 但是其实使用 opener 打开的流中并没有, 当时跟 GPT 杠了挺久, 然后 GPT 改口了ww</p>
 <p>GPT 最终的答复是:</p>
 <blockquote>
-<p>根据你提供的代码，使用<code>opener.open()</code>方法发送请求并获得响应。在这种情况下，<code>response</code>对象是由<code>opener.open()</code>方法返回的，而不是<code>urlopen()</code>函数返回的。<br><code>Opener</code>对象是<code>urllib.request</code>模块中的一个类，用于发送HTTP请求。<code>opener.open()</code>方法接受一个<code>Request</code>对象作为参数，并返回一个<code>HTTPResponse</code>对象，表示服务器的响应。<br>然而，<code>opener.open()</code>方法返回的<code>HTTPResponse</code>对象可能不会附带<code>request</code>属性。这是因为<code>opener.open()</code>方法是一个高级接口，它隐藏了底层的请求细节，不直接暴露<code>Request</code>对象。</p>
+<p><code>opener.open()</code>方法返回的<code>HTTPResponse</code>对象可能不会附带<code>request</code>属性。这是因为<code>opener.open()</code>方法是一个高级接口，它隐藏了底层的请求细节，不直接暴露<code>Request</code>对象。</p>
 </blockquote>
 </details>
 
@@ -306,18 +306,18 @@
 flowchart TB
 
     F(下载管理器实例化) -- 启动 --> auto_thread_starter
-
+    
     subgraph auto_thread_starter
         direction TB
-
+    
         b{检查 task_queue}
         b -- 有任务 --> c[将任务取出, 作为子线程开始运行]
         b -- 无任务 --> b
         c --> b
     end
-
+    
     c -- 启动 --> task_itself
-
+    
     subgraph task_itself
         direction TB
         g[将参数中的 index 放入 running_indexes]
@@ -412,14 +412,14 @@ flowchart TB
     plot_1 --> plot_2
     plot_1 --> plot_3
     plot_1 --> plot_4
-
+    
     plot_2 --> plot_5
     plot_2 --> plot_6
-
+    
     plot_3 --> plot_5
-
+    
     plot_4 --> plot_5
-
+    
     plot_6 --> plot_2
 </pre>
 <p><small><del>我超这个<code>mermaid</code>的牛魔绘图啊</del></small><br>分层是为了更有层次地绘图</p>
@@ -542,7 +542,7 @@ flowchart TB
 </div>
   
   
-    <script async src="/js/copy-codeblock.js?v=1704047049877"></script>
+    <script async src="/js/copy-codeblock.js?v=1707389866550"></script>
   
 
   
