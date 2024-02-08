@@ -14,7 +14,7 @@
 <meta property="og:description" content="首先很抱歉先前那篇讲 BiliTools 的文章不更了，问就是太烂了讲不动一点这次我想来讲一下我的 QQ 机器人，Mirai 酱 Mirai 酱的故事最初想要做一个自己的 QQ 机器人，应该是在某位群友在群里询问了关于机器人的事之后。后来他拉着他的机器人凯尔希进了群，不过不知为何最后却似了。 最初的 Mirai 酱翻了下我的程序存档，Mirai 酱最早是在 2022 年 4 月左右被我编写出来的，">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-02-08T02:00:00.000Z">
-<meta property="article:modified_time" content="2024-02-08T10:57:03.627Z">
+<meta property="article:modified_time" content="2024-02-08T11:01:28.372Z">
 <meta property="article:author" content="LemonyNingmeng">
 <meta property="article:tag" content="Python">
 <meta property="article:tag" content="onebot">
@@ -26,15 +26,15 @@
 <link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
 
 
-<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1707389866566">
+<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1707390104272">
 
-<link rel="stylesheet" href="/css/style.css?v=1707389866567">
+<link rel="stylesheet" href="/css/style.css?v=1707390104272">
 
 
 
 
     
-        <link rel="stylesheet" href="/custom.css?v=1707389866567">
+        <link rel="stylesheet" href="/custom.css?v=1707390104272">
     
 
 
@@ -44,7 +44,7 @@
 <script src="/lib/lax.min.js" async></script>
 
 
-<script async src="/js/app.js?v=1707389866567"></script>
+<script async src="/js/app.js?v=1707390104272"></script>
 
  
 
@@ -242,8 +242,8 @@ Plugin
 <p><del>笑嘻了，我消息筛选用正则表达式用到似</del></p>
 <p>总之就是非常的简陋就是了，你要什么得自己来，一点都不开箱即用。</p>
 <p>不过反正都是自用的就是了 <small><del>我怎么写也没人能管我（小声）</del></small></p>
-<h2 id="关于-Mirai-酱的插件们"><a href="#关于-Mirai-酱的插件们" class="headerlink" title="关于 Mirai 酱的插件们"></a>关于 Mirai 酱的插件们</h2><h3 id="涩图插件"><a href="#涩图插件" class="headerlink" title="涩图插件"></a>涩图插件</h3><p>插件名：EroPicSender</p>
-<h4 id="运行逻辑"><a href="#运行逻辑" class="headerlink" title="运行逻辑"></a>运行逻辑</h4><pre class="mermaid">
+<h1 id="关于-Mirai-酱的插件们"><a href="#关于-Mirai-酱的插件们" class="headerlink" title="关于 Mirai 酱的插件们"></a>关于 Mirai 酱的插件们</h1><h2 id="涩图插件"><a href="#涩图插件" class="headerlink" title="涩图插件"></a>涩图插件</h2><p>插件名：EroPicSender</p>
+<h3 id="运行逻辑"><a href="#运行逻辑" class="headerlink" title="运行逻辑"></a>运行逻辑</h3><pre class="mermaid">
 flowchart TB
 
 askforsetu[/群友找Mirai酱要涩图/] --> checkperm
@@ -276,33 +276,35 @@ loadcache -.-> cache
 <li>涩图发送失败会改为仅发送文字描述  </li>
 <li>程序退出时会保存缓存到文件</li>
 </ul>
-<h4 id="图源"><a href="#图源" class="headerlink" title="图源"></a>图源</h4><p>来自 <a target="_blank" rel="noopener" href="https://api.lolicon.app/">Lolicon API</a>，非常感谢它的开发者</p>
-<h3 id="明日方舟抽卡模拟"><a href="#明日方舟抽卡模拟" class="headerlink" title="明日方舟抽卡模拟"></a>明日方舟抽卡模拟</h3><p>插件名：ArknightsGacha</p>
-<h4 id="数据获取"><a href="#数据获取" class="headerlink" title="数据获取"></a>数据获取</h4><p>干员列表来自 <a target="_blank" rel="noopener" href="https://wiki.biligame.com/arknights/%E5%B9%B2%E5%91%98%E6%95%B0%E6%8D%AE%E8%A1%A8">BiliGame Wiki</a><br>把获取的网页用 xpath 一翻，数据就来了</p>
+<h3 id="图源"><a href="#图源" class="headerlink" title="图源"></a>图源</h3><p>来自 <a target="_blank" rel="noopener" href="https://api.lolicon.app/">Lolicon API</a>，非常感谢它的开发者</p>
+<h2 id="明日方舟抽卡模拟"><a href="#明日方舟抽卡模拟" class="headerlink" title="明日方舟抽卡模拟"></a>明日方舟抽卡模拟</h2><p>插件名：ArknightsGacha</p>
+<h3 id="数据获取"><a href="#数据获取" class="headerlink" title="数据获取"></a>数据获取</h3><p>干员列表来自 <a target="_blank" rel="noopener" href="https://wiki.biligame.com/arknights/%E5%B9%B2%E5%91%98%E6%95%B0%E6%8D%AE%E8%A1%A8">BiliGame Wiki</a><br>把获取的网页用 xpath 一翻，数据就来了</p>
 <blockquote>
 <p>什么？为什么不是 PRTS ？</p>
 </blockquote>
 <p><del>因为 B 站他直接把数据丢网页源代码里了，大好人属于是</del></p>
 <p>根据干员的获取途径生成中坚和常驻两个池子<br><del>限定池子理论上也能做，但是群友急了于是先这样了</del></p>
 <p>能够通过指令让 Mirai 酱立即更新干员数据</p>
-<h4 id="运行逻辑-1"><a href="#运行逻辑-1" class="headerlink" title="运行逻辑"></a>运行逻辑</h4><p>插件初始化时会从本地加载保存的干员数据<br>加载完毕后生成两个字典（代表中坚和标准两个池子），键为星级，值为对应的干员列表  </p>
+<h3 id="运行逻辑-1"><a href="#运行逻辑-1" class="headerlink" title="运行逻辑"></a>运行逻辑</h3><p>插件初始化时会从本地加载保存的干员数据<br>加载完毕后生成两个字典（代表中坚和标准两个池子），键为星级，值为对应的干员列表  </p>
 <p>每次请求抽卡时定义一个初始概率表：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs python">&#123;<br>    <span class="hljs-number">3</span>: <span class="hljs-number">0.4</span>,<br>    <span class="hljs-number">4</span>: <span class="hljs-number">0.5</span>,<br>    <span class="hljs-number">5</span>: <span class="hljs-number">0.08</span>,<br>    <span class="hljs-number">6</span>: <span class="hljs-number">0.02</span>,<br>&#125;<br></code></pre></td></tr></table></figure>
 <p>很明显 键是星级，值是概率  </p>
 <p>抽卡会传入一个<code>combo</code>值，代表连续抽了多少抽没出 6 星。这个值可以经由群员的QQ号查到，用以实现 “若连续 50 发未出 6 星，下次 6 星概率增加 2%，直到第 100 发时必出 6 星” 的设定<br>抽卡函数会根据上述逻辑对初始概率表进行修改，然后通过带权重的随机来确定抽到的星级，最后用初始化时生成的字典来得到具体抽到的干员数据，返回给负责交互的部分</p>
 <p><code>combo</code>值由负责交互的那一坨保管，每当抽到 6 星时这个值就重设为<code>0</code><br>在收到干员数据之后负责交互的那部分便生成文本，回复给群友</p>
-<h3 id="B-站动态转发"><a href="#B-站动态转发" class="headerlink" title="B 站动态转发"></a>B 站动态转发</h3><p>插件名：BiliDynamicForwarder</p>
-<h4 id="运行逻辑-2"><a href="#运行逻辑-2" class="headerlink" title="运行逻辑"></a>运行逻辑</h4><p>每 5 分钟请求一遍监听对象们的历史动态，与上一次请求的数据比对，找出新发布的进行发送<br><del>↑ emm我的“找出新发布的动态”这个部分似乎还有点问题，时不时就会把历史的某一条动态刨出来发了</del></p>
+<h2 id="B-站动态转发"><a href="#B-站动态转发" class="headerlink" title="B 站动态转发"></a>B 站动态转发</h2><p>插件名：BiliDynamicForwarder</p>
+<h3 id="运行逻辑-2"><a href="#运行逻辑-2" class="headerlink" title="运行逻辑"></a>运行逻辑</h3><p>每 5 分钟请求一遍监听对象们的历史动态，与上一次请求的数据比对，找出新发布的进行发送<br><del>↑ emm我的“找出新发布的动态”这个部分似乎还有点问题，时不时就会把历史的某一条动态刨出来发了</del></p>
 <p>如果动态内容命中了黑关键词，那么它将不会被发送；<br>但是如果同时又命中了白关键词，那么它还是会被发送。</p>
 <p>这个插件的交互部分主要就是设置监听对象，逻辑还挺简单的，难写的原因是没有现成的鉴权和指令系统<br>其余部分都是主动发送了没什么好说的  </p>
 <p>自动维护一个用 B 站 uid 查昵称的字典，用来添加移除监听对象</p>
-<h4 id="关于接口"><a href="#关于接口" class="headerlink" title="关于接口"></a>关于接口</h4><p>来自易姐的 <a target="_blank" rel="noopener" href="https://socialsisteryi.github.io/bilibili-API-collect/"><code>bilibili-API-collect</code></a> ，非常感谢 ta<br>函数封装由我实现，弄得一坨</p>
-<h3 id="萌属性抽取"><a href="#萌属性抽取" class="headerlink" title="萌属性抽取"></a>萌属性抽取</h3><p>插件名：MoeAttriLottery</p>
+<h3 id="关于接口"><a href="#关于接口" class="headerlink" title="关于接口"></a>关于接口</h3><p>来自易姐的 <a target="_blank" rel="noopener" href="https://socialsisteryi.github.io/bilibili-API-collect/"><code>bilibili-API-collect</code></a> ，非常感谢 ta<br>函数封装由我实现，弄得一坨</p>
+<h2 id="萌属性抽取"><a href="#萌属性抽取" class="headerlink" title="萌属性抽取"></a>萌属性抽取</h2><p>插件名：MoeAttriLottery</p>
 <p>之前写好这个插件的时候还有些沾沾自喜，然后看了别人家的机器人才发现，这其实是几年前就玩过时了的东西w<br><del>果然是你能想得到的东西，别人早就想到了</del></p>
-<h4 id="数据源"><a href="#数据源" class="headerlink" title="数据源"></a>数据源</h4><p>由我整理自萌娘百科-<a target="_blank" rel="noopener" href="https://zh.moegirl.org.cn/%E8%90%8C%E5%B1%9E%E6%80%A7">萌属性</a></p>
-<h4 id="运行逻辑-3"><a href="#运行逻辑-3" class="headerlink" title="运行逻辑"></a>运行逻辑</h4><p>非常简单的带权重的随机抽取而已，一天仅能抽一次</p>
+<h3 id="数据源"><a href="#数据源" class="headerlink" title="数据源"></a>数据源</h3><p>由我整理自萌娘百科-<a target="_blank" rel="noopener" href="https://zh.moegirl.org.cn/%E8%90%8C%E5%B1%9E%E6%80%A7">萌属性</a></p>
+<h3 id="运行逻辑-3"><a href="#运行逻辑-3" class="headerlink" title="运行逻辑"></a>运行逻辑</h3><p>非常简单的带权重的随机抽取而已，一天仅能抽一次</p>
 <p>拥有权重机制，比如我能把年龄属性中的“萝莉”调到<code>10</code>，其他全为<code>1</code>😋  </p>
 <p>拥有主副属性机制，当抽到的主属性在副属性中有键时，会再抽一个副属性出来<br>比如抽到了渐变色瞳，还可以再抽到一个红-&gt;蓝渐变的细分支  </p>
+<hr>
+<p>emm 大概就是这样，以后应该还会继续维护 Mirai 酱的，有种养女儿的快感 😋</p>
 
     <hr />
 <p><small>- 到底了噢 -</small></p>
@@ -331,7 +333,7 @@ loadcache -.-> cache
 </div>
   
   
-    <script async src="/js/copy-codeblock.js?v=1707389866549"></script>
+    <script async src="/js/copy-codeblock.js?v=1707390104255"></script>
   
 
   
@@ -350,7 +352,7 @@ loadcache -.-> cache
             <button class="mdui-fab catalog" style="overflow:unset;">
                 <i class="nexmoefont icon-i-catalog"></i>
                 <div class="nexmoe-toc">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Mirai-%E9%85%B1%E7%9A%84%E6%95%85%E4%BA%8B"><span class="toc-number">1.</span> <span class="toc-text">Mirai 酱的故事</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%80%E5%88%9D%E7%9A%84-Mirai-%E9%85%B1"><span class="toc-number">1.1.</span> <span class="toc-text">最初的 Mirai 酱</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%87%8D%E7%94%9F%E7%9A%84-Mirai-%E9%85%B1"><span class="toc-number">1.2.</span> <span class="toc-text">重生的 Mirai 酱</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%8E%B0%E5%9C%A8%E7%9A%84-Mirai-%E9%85%B1"><span class="toc-number">1.3.</span> <span class="toc-text">现在的 Mirai 酱</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E%E7%AE%80%E6%98%93%E6%A1%86%E6%9E%B6"><span class="toc-number">2.</span> <span class="toc-text">关于简易框架</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%9A%E4%BF%A1%E6%96%B9%E5%BC%8F"><span class="toc-number">2.1.</span> <span class="toc-text">通信方式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%84%E9%83%A8%E5%88%86%E5%85%B3%E7%B3%BB"><span class="toc-number">2.2.</span> <span class="toc-text">各部分关系</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8F%92%E4%BB%B6%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%AE%9E%E7%8E%B0"><span class="toc-number">2.3.</span> <span class="toc-text">插件系统的实现</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8"><span class="toc-number">2.4.</span> <span class="toc-text">如何使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AE%80%E5%8D%95%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="toc-number">2.4.1.</span> <span class="toc-text">简单的使用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%91"><span class="toc-number">2.4.2.</span> <span class="toc-text">插件开发</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BC%BA%E9%99%B7"><span class="toc-number">2.5.</span> <span class="toc-text">缺陷</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E-Mirai-%E9%85%B1%E7%9A%84%E6%8F%92%E4%BB%B6%E4%BB%AC"><span class="toc-number">2.6.</span> <span class="toc-text">关于 Mirai 酱的插件们</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B6%A9%E5%9B%BE%E6%8F%92%E4%BB%B6"><span class="toc-number">2.6.1.</span> <span class="toc-text">涩图插件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C%E9%80%BB%E8%BE%91"><span class="toc-number">2.6.1.1.</span> <span class="toc-text">运行逻辑</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9B%BE%E6%BA%90"><span class="toc-number">2.6.1.2.</span> <span class="toc-text">图源</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%98%8E%E6%97%A5%E6%96%B9%E8%88%9F%E6%8A%BD%E5%8D%A1%E6%A8%A1%E6%8B%9F"><span class="toc-number">2.6.2.</span> <span class="toc-text">明日方舟抽卡模拟</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E8%8E%B7%E5%8F%96"><span class="toc-number">2.6.2.1.</span> <span class="toc-text">数据获取</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C%E9%80%BB%E8%BE%91-1"><span class="toc-number">2.6.2.2.</span> <span class="toc-text">运行逻辑</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#B-%E7%AB%99%E5%8A%A8%E6%80%81%E8%BD%AC%E5%8F%91"><span class="toc-number">2.6.3.</span> <span class="toc-text">B 站动态转发</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C%E9%80%BB%E8%BE%91-2"><span class="toc-number">2.6.3.1.</span> <span class="toc-text">运行逻辑</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E%E6%8E%A5%E5%8F%A3"><span class="toc-number">2.6.3.2.</span> <span class="toc-text">关于接口</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%90%8C%E5%B1%9E%E6%80%A7%E6%8A%BD%E5%8F%96"><span class="toc-number">2.6.4.</span> <span class="toc-text">萌属性抽取</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E6%BA%90"><span class="toc-number">2.6.4.1.</span> <span class="toc-text">数据源</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C%E9%80%BB%E8%BE%91-3"><span class="toc-number">2.6.4.2.</span> <span class="toc-text">运行逻辑</span></a></li></ol></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Mirai-%E9%85%B1%E7%9A%84%E6%95%85%E4%BA%8B"><span class="toc-number">1.</span> <span class="toc-text">Mirai 酱的故事</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%80%E5%88%9D%E7%9A%84-Mirai-%E9%85%B1"><span class="toc-number">1.1.</span> <span class="toc-text">最初的 Mirai 酱</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%87%8D%E7%94%9F%E7%9A%84-Mirai-%E9%85%B1"><span class="toc-number">1.2.</span> <span class="toc-text">重生的 Mirai 酱</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%8E%B0%E5%9C%A8%E7%9A%84-Mirai-%E9%85%B1"><span class="toc-number">1.3.</span> <span class="toc-text">现在的 Mirai 酱</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E%E7%AE%80%E6%98%93%E6%A1%86%E6%9E%B6"><span class="toc-number">2.</span> <span class="toc-text">关于简易框架</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%9A%E4%BF%A1%E6%96%B9%E5%BC%8F"><span class="toc-number">2.1.</span> <span class="toc-text">通信方式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%84%E9%83%A8%E5%88%86%E5%85%B3%E7%B3%BB"><span class="toc-number">2.2.</span> <span class="toc-text">各部分关系</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8F%92%E4%BB%B6%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%AE%9E%E7%8E%B0"><span class="toc-number">2.3.</span> <span class="toc-text">插件系统的实现</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8"><span class="toc-number">2.4.</span> <span class="toc-text">如何使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AE%80%E5%8D%95%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="toc-number">2.4.1.</span> <span class="toc-text">简单的使用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%91"><span class="toc-number">2.4.2.</span> <span class="toc-text">插件开发</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BC%BA%E9%99%B7"><span class="toc-number">2.5.</span> <span class="toc-text">缺陷</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E-Mirai-%E9%85%B1%E7%9A%84%E6%8F%92%E4%BB%B6%E4%BB%AC"><span class="toc-number">3.</span> <span class="toc-text">关于 Mirai 酱的插件们</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B6%A9%E5%9B%BE%E6%8F%92%E4%BB%B6"><span class="toc-number">3.1.</span> <span class="toc-text">涩图插件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C%E9%80%BB%E8%BE%91"><span class="toc-number">3.1.1.</span> <span class="toc-text">运行逻辑</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%BE%E6%BA%90"><span class="toc-number">3.1.2.</span> <span class="toc-text">图源</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%98%8E%E6%97%A5%E6%96%B9%E8%88%9F%E6%8A%BD%E5%8D%A1%E6%A8%A1%E6%8B%9F"><span class="toc-number">3.2.</span> <span class="toc-text">明日方舟抽卡模拟</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E8%8E%B7%E5%8F%96"><span class="toc-number">3.2.1.</span> <span class="toc-text">数据获取</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C%E9%80%BB%E8%BE%91-1"><span class="toc-number">3.2.2.</span> <span class="toc-text">运行逻辑</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#B-%E7%AB%99%E5%8A%A8%E6%80%81%E8%BD%AC%E5%8F%91"><span class="toc-number">3.3.</span> <span class="toc-text">B 站动态转发</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C%E9%80%BB%E8%BE%91-2"><span class="toc-number">3.3.1.</span> <span class="toc-text">运行逻辑</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E%E6%8E%A5%E5%8F%A3"><span class="toc-number">3.3.2.</span> <span class="toc-text">关于接口</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%90%8C%E5%B1%9E%E6%80%A7%E6%8A%BD%E5%8F%96"><span class="toc-number">3.4.</span> <span class="toc-text">萌属性抽取</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E6%BA%90"><span class="toc-number">3.4.1.</span> <span class="toc-text">数据源</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C%E9%80%BB%E8%BE%91-3"><span class="toc-number">3.4.2.</span> <span class="toc-text">运行逻辑</span></a></li></ol></li></ol></li></ol>
                 </div>
             </button>
             
