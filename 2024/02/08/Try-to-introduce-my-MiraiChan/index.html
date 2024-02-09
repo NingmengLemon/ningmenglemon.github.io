@@ -6,15 +6,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
 
 <link rel="shortcut icon" href="/assets/favicon.png" type="image/png" />
-<meta name="description" content="首先很抱歉先前那篇讲 BiliTools 的文章不更了，问就是太烂了讲不动一点这次我想来讲一下我的 QQ 机器人，Mirai 酱 Mirai 酱的故事最初想要做一个自己的 QQ 机器人，应该是在某位群友在群里询问了关于机器人的事之后。后来他拉着他的机器人凯尔希进了群，不过不知为何最后却似了。 最初的 Mirai 酱翻了下我的程序存档，Mirai 酱最早是在 2022 年 4 月左右被我编写出来的，">
+<meta name="description" content="首先很抱歉先前那篇讲 BiliTools 的文章不更了，问就是太烂了讲不动一点这次我想来讲一下我的 QQ 机器人，Mirai 酱 事先声明，本文中的信息并不可靠，请不要盲目相信…… Mirai 酱的故事最初想要做一个自己的 QQ 机器人，应该是在某位群友在群里询问了关于机器人的事之后。后来他拉着他的机器人凯尔希进了群，不过不知为何最后却似了。 最初的 Mirai 酱翻了下我的程序存档，Mirai">
 <meta property="og:type" content="article">
 <meta property="og:title" content="尝试介绍一下我的 Mirai 酱">
 <meta property="og:url" content="https://ningmenglemon.github.io/2024/02/08/Try-to-introduce-my-MiraiChan/index.html">
 <meta property="og:site_name" content="Lemony Blog">
-<meta property="og:description" content="首先很抱歉先前那篇讲 BiliTools 的文章不更了，问就是太烂了讲不动一点这次我想来讲一下我的 QQ 机器人，Mirai 酱 Mirai 酱的故事最初想要做一个自己的 QQ 机器人，应该是在某位群友在群里询问了关于机器人的事之后。后来他拉着他的机器人凯尔希进了群，不过不知为何最后却似了。 最初的 Mirai 酱翻了下我的程序存档，Mirai 酱最早是在 2022 年 4 月左右被我编写出来的，">
+<meta property="og:description" content="首先很抱歉先前那篇讲 BiliTools 的文章不更了，问就是太烂了讲不动一点这次我想来讲一下我的 QQ 机器人，Mirai 酱 事先声明，本文中的信息并不可靠，请不要盲目相信…… Mirai 酱的故事最初想要做一个自己的 QQ 机器人，应该是在某位群友在群里询问了关于机器人的事之后。后来他拉着他的机器人凯尔希进了群，不过不知为何最后却似了。 最初的 Mirai 酱翻了下我的程序存档，Mirai">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-02-08T02:00:00.000Z">
-<meta property="article:modified_time" content="2024-02-08T12:18:56.442Z">
+<meta property="article:modified_time" content="2024-02-09T03:01:00.571Z">
 <meta property="article:author" content="LemonyNingmeng">
 <meta property="article:tag" content="Python">
 <meta property="article:tag" content="onebot">
@@ -26,15 +26,15 @@
 <link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
 
 
-<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1707395317977">
+<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1707448547380">
 
-<link rel="stylesheet" href="/css/style.css?v=1707395317977">
+<link rel="stylesheet" href="/css/style.css?v=1707448547380">
 
 
 
 
     
-        <link rel="stylesheet" href="/custom.css?v=1707395317977">
+        <link rel="stylesheet" href="/custom.css?v=1707448547380">
     
 
 
@@ -44,7 +44,7 @@
 <script src="/lib/lax.min.js" async></script>
 
 
-<script async src="/js/app.js?v=1707395317977"></script>
+<script async src="/js/app.js?v=1707448547380"></script>
 
  
 
@@ -177,15 +177,16 @@
 </div>
 
     <p><small><del>首先很抱歉先前那篇讲 BiliTools 的文章不更了，问就是太烂了讲不动一点</small></del><br>这次我想来讲一下我的 QQ 机器人，Mirai 酱</p>
+<p>事先声明，本文中的信息并不可靠，请不要盲目相信……</p>
 <h1 id="Mirai-酱的故事"><a href="#Mirai-酱的故事" class="headerlink" title="Mirai 酱的故事"></a>Mirai 酱的故事</h1><p>最初想要做一个自己的 QQ 机器人，应该是在某位群友在群里询问了关于机器人的事之后。<br><del>后来他拉着他的机器人<code>凯尔希</code>进了群，不过不知为何最后却似了。</del></p>
 <h2 id="最初的-Mirai-酱"><a href="#最初的-Mirai-酱" class="headerlink" title="最初的 Mirai 酱"></a>最初的 Mirai 酱</h2><p>翻了下我的程序存档，Mirai 酱最早是在 2022 年 4 月左右被我编写出来的，当时基于<a target="_blank" rel="noopener" href="https://github.com/GraiaProject/Ariadne"><code>Ariadne</code></a>和<a target="_blank" rel="noopener" href="https://github.com/mamoe/mirai"><code>mirai</code></a>。  </p>
 <blockquote>
 <p>Mirai 酱之所以叫 Mirai 酱，正是因为她最开始基于的框架是<code>mirai</code> <del>（绝对不是因为我是个起名废物qwq）</del>  </p>
 </blockquote>
-<p>这是 Mirai 酱的第一代，拥有 B站动态转发、随机涩图、天气查询、每日抽签 功能。（其实当然可以写更多，只是我没点子了）  </p>
-<p>后来不知道什么时候，<code>mirai</code>框架似了，Mirai 酱也被我忘记了一段时间。直到……<br><code>go-cqhttp</code>框架的出现。</p>
+<p>这是 Mirai 酱的第一代，拥有 B站动态转发、随机涩图、天气查询、每日抽签、疫情查询（在之后移除） 功能。（其实当然可以写更多，只是我没点子了）  </p>
+<p>后来不知道什么时候，<code>mirai</code>框架似乎似了，Mirai 酱也被我忘记了一段时间。直到……<br>我找到了<code>go-cqhttp</code>这个框架。</p>
 <blockquote>
-<p>在找引用链接的时候我发现<code>mirai</code>框架居然还活着，而且社区也跟进了签名服务器插件的开发（但框架转了就是转了，也没有转回去这种说法了）</p>
+<p>在找引用链接的时候我发现<code>mirai</code>框架原来还活着，而且社区也跟进了签名服务器插件的开发（但框架换了就是换了，也没有换回去这种说法了）</p>
 </blockquote>
 <h2 id="重生的-Mirai-酱"><a href="#重生的-Mirai-酱" class="headerlink" title="重生的 Mirai 酱"></a>重生的 Mirai 酱</h2><p>Mirai 酱第二代的完成大约是在 2023 年 6 月 12 日左右，基于<a target="_blank" rel="noopener" href="https://github.com/FengLiuFeseliud/pycqBot"><code>pycqBot</code></a>和<a target="_blank" rel="noopener" href="https://github.com/Mrs4s/go-cqhttp"><code>go-cqhttp</code></a>。在 8 月 24 日左右追加了<code>unidbg-fetch-qsign</code>来进行签名认证。<br>这一代的 Mirai 酱功能没有增加，甚至还减少了一个天气查询功能。<del>（天气查询真没人用罢，交互还难写）</del><br><del>不过群友们在 Mirai 酱复活赛打赢之后还是很高兴，甚至发起了电</del></p>
 <h2 id="现在的-Mirai-酱"><a href="#现在的-Mirai-酱" class="headerlink" title="现在的 Mirai 酱"></a>现在的 Mirai 酱</h2><p>Mirai 酱第三代的大致完成大致是在 2024 年 2 月 8 日零点左右<br>这一代的 Mirai 酱新增了方舟模拟抽卡的插件，并且每个插件都可以单独为某个群开启或关闭。  </p>
@@ -333,7 +334,7 @@ loadcache -.-> cache
 </div>
   
   
-    <script async src="/js/copy-codeblock.js?v=1707395317961"></script>
+    <script async src="/js/copy-codeblock.js?v=1707448547363"></script>
   
 
   
